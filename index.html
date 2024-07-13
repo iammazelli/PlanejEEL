@@ -9,10 +9,10 @@
 <body>
     <div class="container">
         <h1>Cursos Disponíveis</h1>
-        <form>
+        <form onsubmit="return redirecionarCurso();">
             <div class="form-group">
                 <label for="curso_nome">Selecione um curso:</label>
-                <select class="form-control" id="curso_nome" name="curso_nome" onchange="location = this.value + '.html';">
+                <select class="form-control" id="curso_nome" name="curso_nome">
                     <option value="EF">EF</option>
                     <option value="EM">EM</option>
                     <option value="EA">EA</option>
@@ -28,6 +28,13 @@
     <footer class="text-center mt-4">
         <p>© Desenvolvido por Derickoso Ruindade Pura</p>
     </footer>
+    <script>
+        function redirecionarCurso() {
+            var cursoNome = document.getElementById("curso_nome").value;
+            window.location.href = cursoNome + '.html';
+            return false; // Prevent the form from submitting traditionally
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
