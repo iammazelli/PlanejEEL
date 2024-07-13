@@ -1128,16 +1128,26 @@ function ocultarRequisitos(codigoDisciplina) {
 
 function verificarTravada() {
     var disciplinas = document.querySelectorAll('.disciplina-item');
+    var reprovadas = new Set();
+    var travadas = new Set();
 
-    function isTravada(codigoDisciplina) {
+    disciplinas.forEach(function(disciplina) {
+        if (disciplina.classList.contains('disciplina-reprovada')) {
+            reprovadas.add(disciplina.id.split('-')[1]);
+        }
+    });
+
+    function isTravada(codigoDisciplina, visitados = new Set()) {
+        if (visitados.has(codigoDisciplina)) {
+            return false;  // Evita loops infinitos em caso de dependências circulares
+        }
+        visitados.add(codigoDisciplina);
+
         var requisitos = document.querySelectorAll('#requisitos-' + codigoDisciplina + ' li');
         for (var requisito of requisitos) {
             var codigoRequisito = requisito.id.split('-')[1];
-            var disciplinaRequisito = document.getElementById('disciplina-' + codigoRequisito);
-            if (disciplinaRequisito) {
-                if (disciplinaRequisito.classList.contains('disciplina-reprovada') || isTravada(codigoRequisito)) {
-                    return true;
-                }
+            if (reprovadas.has(codigoRequisito) || travadas.has(codigoRequisito) || isTravada(codigoRequisito, visitados)) {
+                return true;
             }
         }
         return false;
@@ -1147,8 +1157,10 @@ function verificarTravada() {
         var codigoDisciplina = disciplina.id.split('-')[1];
         if (isTravada(codigoDisciplina)) {
             disciplina.classList.add('disciplina-travada');
+            travadas.add(codigoDisciplina);
         } else {
             disciplina.classList.remove('disciplina-travada');
+            travadas.delete(codigoDisciplina);
         }
     });
 }
@@ -1163,7 +1175,7 @@ function verificarTravada() {
 }
 
 .semestre-card {
-    flex: 1 1 calc(25% - 20px); /* Ocupa 1/4 da largura disponível menos o espaço entre as colunas */
+    flex: 1 1 calc(20% - 20px); /* Ocupa 1/4 da largura disponível menos o espaço entre as colunas */
     min-width: 200px; /* Largura mínima para garantir legibilidade */
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -1207,7 +1219,7 @@ footer {
 
     </div>
     <footer class="text-center mt-4">
-      <p>© Desenvolvido por Derickoso Ruindade Pura </p><p>
+      <p>© Desenvolvido por Derick Mazelli Barbosa </p><p>
     </p></footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
