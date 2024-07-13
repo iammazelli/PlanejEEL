@@ -110,17 +110,6 @@
                     </div>
                 </li>
                 
-                
-                <li id="disciplina-LOB1009" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1009')" onmouseover="mostrarRequisitos('LOB1009')" onmouseout="ocultarRequisitos('LOB1009')">
-                    <strong>LOB1009</strong>:  Leitura e Interpretacao de Desenho Tecnico
-                    <div id="requisitos-LOB1009" class="requisitos" style="display: none;">
-                        <strong>Requisitos:</strong>
-                        <ul class="list-group">
-                            
-                        </ul>
-                    </div>
-                </li>
-                
             </ul>
         </div>
     </div>
@@ -740,17 +729,6 @@
                     </div>
                 </li>
                 
-                
-                <li id="disciplina-LOQ4274" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4274')" onmouseover="mostrarRequisitos('LOQ4274')" onmouseout="ocultarRequisitos('LOQ4274')">
-                    <strong>LOQ4274</strong>:  Engenharia de Sistemas
-                    <div id="requisitos-LOQ4274" class="requisitos" style="display: none;">
-                        <strong>Requisitos:</strong>
-                        <ul class="list-group">
-                            
-                        </ul>
-                    </div>
-                </li>
-                
             </ul>
         </div>
     </div>
@@ -836,32 +814,6 @@
                     </div>
                 </li>
                 
-                
-                <li id="disciplina-LOQ4266" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4266')" onmouseover="mostrarRequisitos('LOQ4266')" onmouseout="ocultarRequisitos('LOQ4266')">
-                    <strong>LOQ4266</strong>:  Topicos Especiais em Engenharia de Producao I
-                    <div id="requisitos-LOQ4266" class="requisitos" style="display: none;">
-                        <strong>Requisitos:</strong>
-                        <ul class="list-group">
-                            
-                        </ul>
-                    </div>
-                </li>
-                
-                
-                <li id="disciplina-LOQ4269" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4269')" onmouseover="mostrarRequisitos('LOQ4269')" onmouseout="ocultarRequisitos('LOQ4269')">
-                    <strong>LOQ4269</strong>:  Planejamento e Gestao Estrategica
-                    <div id="requisitos-LOQ4269" class="requisitos" style="display: none;">
-                        <strong>Requisitos:</strong>
-                        <ul class="list-group">
-                            
-                            <li id="requisito-LOQ4239" class="list-group-item">LOQ4239</li>
-                            
-                            <li id="requisito-LOQ4240" class="list-group-item">LOQ4240</li>
-                            
-                        </ul>
-                    </div>
-                </li>
-                
             </ul>
         </div>
     </div>
@@ -942,17 +894,6 @@
                         <ul class="list-group">
                             
                             <li id="requisito-LOQ4255" class="list-group-item">LOQ4255</li>
-                            
-                        </ul>
-                    </div>
-                </li>
-                
-                
-                <li id="disciplina-LOQ4267" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4267')" onmouseover="mostrarRequisitos('LOQ4267')" onmouseout="ocultarRequisitos('LOQ4267')">
-                    <strong>LOQ4267</strong>:  Topicos Especiais em Engenharia de Producao II
-                    <div id="requisitos-LOQ4267" class="requisitos" style="display: none;">
-                        <strong>Requisitos:</strong>
-                        <ul class="list-group">
                             
                         </ul>
                     </div>
@@ -1081,43 +1022,6 @@
                     </div>
                 </li>
                 
-                
-                <li id="disciplina-LOQ4243" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4243')" onmouseover="mostrarRequisitos('LOQ4243')" onmouseout="ocultarRequisitos('LOQ4243')">
-                    <strong>LOQ4243</strong>:  Engenharia de Sistemas Eletronicos
-                    <div id="requisitos-LOQ4243" class="requisitos" style="display: none;">
-                        <strong>Requisitos:</strong>
-                        <ul class="list-group">
-                            
-                            <li id="requisito-LOB1006" class="list-group-item">LOB1006</li>
-                            
-                            <li id="requisito-LOB1011" class="list-group-item">LOB1011</li>
-                            
-                        </ul>
-                    </div>
-                </li>
-                
-                
-                <li id="disciplina-LOQ4248" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4248')" onmouseover="mostrarRequisitos('LOQ4248')" onmouseout="ocultarRequisitos('LOQ4248')">
-                    <strong>LOQ4248</strong>:  Marketing Estrategico
-                    <div id="requisitos-LOQ4248" class="requisitos" style="display: none;">
-                        <strong>Requisitos:</strong>
-                        <ul class="list-group">
-                            
-                        </ul>
-                    </div>
-                </li>
-                
-                
-                <li id="disciplina-LOQ4249" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4249')" onmouseover="mostrarRequisitos('LOQ4249')" onmouseout="ocultarRequisitos('LOQ4249')">
-                    <strong>LOQ4249</strong>:  Oficina de Inovacao
-                    <div id="requisitos-LOQ4249" class="requisitos" style="display: none;">
-                        <strong>Requisitos:</strong>
-                        <ul class="list-group">
-                            
-                        </ul>
-                    </div>
-                </li>
-                
             </ul>
         </div>
     </div>
@@ -1147,25 +1051,25 @@ function ocultarRequisitos(codigoDisciplina) {
 
 function verificarTravada() {
     var disciplinas = document.querySelectorAll('.disciplina-item');
+
+    function isTravada(codigoDisciplina) {
+        var requisitos = document.querySelectorAll('#requisitos-' + codigoDisciplina + ' li');
+        for (var requisito of requisitos) {
+            var codigoRequisito = requisito.id.split('-')[1];
+            var disciplinaRequisito = document.getElementById('disciplina-' + codigoRequisito);
+            if (disciplinaRequisito) {
+                if (disciplinaRequisito.classList.contains('disciplina-reprovada') || isTravada(codigoRequisito)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     disciplinas.forEach(function(disciplina) {
         var codigoDisciplina = disciplina.id.split('-')[1];
-        var requisitos = document.querySelectorAll('#requisitos-' + codigoDisciplina + ' li');
-        
-        // Verifica apenas disciplinas com requisitos
-        if (requisitos.length > 0) {
-            var travada = false;
-            requisitos.forEach(function(requisito) {
-                var codigoRequisito = requisito.id.split('-')[1];
-                var disciplinaRequisito = document.getElementById('disciplina-' + codigoRequisito);
-                if (disciplinaRequisito && (disciplinaRequisito.classList.contains('disciplina-reprovada') || disciplinaRequisito.classList.contains('disciplina-travada'))) {
-                    travada = true;
-                }
-            });
-            if (travada) {
-                disciplina.classList.add('disciplina-travada');
-            } else {
-                disciplina.classList.remove('disciplina-travada');
-            }
+        if (isTravada(codigoDisciplina)) {
+            disciplina.classList.add('disciplina-travada');
         } else {
             disciplina.classList.remove('disciplina-travada');
         }
@@ -1204,11 +1108,6 @@ function verificarTravada() {
 
 .list-group-item {
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.list-group-item:hover {
-    background-color: #f0f0f0;
 }
 
 .disciplina-reprovada {
