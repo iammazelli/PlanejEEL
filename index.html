@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Cursos Disponíveis</h1>
-        <form onsubmit="return redirecionarCurso();">
+        <form id="cursoForm">
             <div class="form-group">
                 <label for="curso_nome">Selecione um curso:</label>
                 <select class="form-control" id="curso_nome" name="curso_nome">
@@ -22,7 +22,7 @@
                     <option value="EQN">EQN</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Ver Grade Curricular</button>
+            <button type="button" class="btn btn-primary" onclick="redirecionarCurso()">Ver Grade Curricular</button>
         </form>
     </div>
     <footer class="text-center mt-4">
@@ -32,7 +32,6 @@
         function redirecionarCurso() {
             var cursoNome = document.getElementById("curso_nome").value;
             window.location.href = cursoNome + '.html';
-            return false; // Prevent the form from submitting traditionally
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
