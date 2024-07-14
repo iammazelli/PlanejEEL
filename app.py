@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
 import requests
 import yaml
+import os
+import re
+from unicodedata import normalize
 
 app = Flask(__name__)
 
@@ -10,19 +13,20 @@ class Disciplina:
         self.nome = nome
         self.semestre = semestre
         self.tipo = tipo
-        self.requisitos = requisitos
+        self.requisitos = requisitos  # Lista de códigos de requisitos
 
 class Curso:
     def __init__(self, nome):
         self.nome = nome
-        self.disciplinas = []
+        self.disciplinas = {}
 
     def disciplinas_por_semestre(self):
         semestres = {}
-        for disciplina in self.disciplinas:
-            if disciplina.semestre not in semestres:
-                semestres[disciplina.semestre] = []
-            semestres[disciplina.semestre].append(disciplina)
+        for codigo, disciplina in self.disciplinas.items():
+            semestre = disciplina.semestre
+            if semestre not in semestres:
+                semestres[semestre] = []
+            semestres[semestre].append(disciplina)
         return semestres
 
 def carregar_cursos_do_yaml(url_yaml):
@@ -35,7 +39,8 @@ def carregar_cursos_do_yaml(url_yaml):
                 curso = Curso(curso_nome)
                 disciplinas = carregar_disciplinas_do_json(curso_nome)
                 if disciplinas:
-                    curso.disciplinas.extend(disciplinas)
+                    for codigo, disciplina in disciplinas.items():
+                        curso.disciplinas[codigo] = disciplina
                 cursos.append(curso)
             return cursos
         else:
@@ -48,18 +53,29 @@ def carregar_cursos_do_yaml(url_yaml):
 def carregar_disciplinas_do_json(curso_nome):
     try:
         url_json = f"https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/{curso_nome}.json"
+        
+        # Verifica se o arquivo JSON existe antes de tentar carregar
+        if not os.path.exists(f"{curso_nome}.json"):
+            print(f"Arquivo JSON para o curso {curso_nome} não encontrado.")
+            return None
+        
         response = requests.get(url_json)
         if response.status_code == 200:
             dados_json = response.json()
-            disciplinas = []
+            disciplinas = {}
             for disciplina_codigo, disciplina_dados in dados_json.items():
                 if disciplina_dados.get("tipo") == "Obrigatórias":
                     nome_disciplina = disciplina_dados.get("nomeascii", "Nome da Disciplina Desconhecido")
                     semestre_disciplina = disciplina_dados.get("semestre", "Semestre Desconhecido")
                     tipo_disciplina = disciplina_dados.get("tipo", "Tipo Desconhecido")
                     requisitos_disciplina = disciplina_dados.get("requisitos", [])
-                    disciplina = Disciplina(disciplina_codigo, nome_disciplina, semestre_disciplina, tipo_disciplina, requisitos_disciplina)
-                    disciplinas.append(disciplina)
+                    
+                    # Limpar caracteres especiais dos códigos de disciplina e requisitos
+                    disciplina_codigo_limpo = limpar_codigo(disciplina_codigo)
+                    nome_disciplina_limpo = limpar_nome(nome_disciplina)
+                    
+                    disciplina = Disciplina(disciplina_codigo_limpo, nome_disciplina_limpo, semestre_disciplina, tipo_disciplina, requisitos_disciplina)
+                    disciplinas[disciplina_codigo_limpo] = disciplina
             return disciplinas
         else:
             print(f"Erro ao acessar o arquivo JSON para o curso {curso_nome}: {response.status_code} {response.reason}")
@@ -67,6 +83,12 @@ def carregar_disciplinas_do_json(curso_nome):
     except Exception as e:
         print(f"Erro ao carregar disciplinas do JSON para o curso {curso_nome}: {e}")
         return None
+
+def limpar_codigo(codigo):
+    return re.sub(r'\W+', '', codigo)
+
+def limpar_nome(nome):
+    return normalize('NFKD', nome).encode('ASCII', 'ignore').decode('ASCII')
 
 url_yaml = "https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/cursos.yml"
 
