@@ -4,15 +4,28 @@
 
 {% block content %}
 <h1>Cursos Disponíveis</h1>
-<form action="{{ url_for('curso') }}" method="get">
+<form>
     <div class="form-group">
         <label for="curso_nome">Selecione um curso:</label>
-        <select class="form-control" id="curso_nome" name="curso_nome">
-            {% for curso in cursos %}
-            <option value="{{ curso.nome }}">{{ curso.nome }}</option>
-            {% endfor %}
+        <select class="form-control" id="curso_nome" name="curso_nome" onchange="redirectToCourse(this.value)">
+            <option value="" disabled selected>Selecione um curso</option>
+            <option value="EF">Engenharia Física (EF)</option>
+            <option value="EM">Engenharia de Materiais (EM)</option>
+            <option value="EA">Engenharia Ambiental (EA)</option>
+            <option value="EP">Engenharia de Produção (EP)</option>
+            <option value="EB">Engenharia Biomédica (EB)</option>
+            <option value="EQD">Engenharia Química Diurno (EQD)</option>
+            <option value="EQN">Engenharia Química Noturno (EQN)</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Ver Grade Curricular</button>
 </form>
+
+<script>
+    function redirectToCourse(curso) {
+        if (curso) {
+            var url = "{{ url_for('static', filename='') }}" + curso.toLowerCase() + ".html";
+            window.location.href = url;
+        }
+    }
+</script>
 {% endblock %}
