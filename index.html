@@ -1,7 +1,5 @@
 {% extends "base.html" %}
-
 {% block title %}Cursos{% endblock %}
-
 {% block content %}
 <h1>Cursos Disponíveis</h1>
 <form>
@@ -9,13 +7,13 @@
         <label for="curso_nome">Selecione um curso:</label>
         <select class="form-control" id="curso_nome" name="curso_nome" onchange="redirectToCourse(this.value)">
             <option value="" disabled selected>Selecione um curso</option>
-            <option value="EF">EF</option>
-            <option value="EM">EM</option>
-            <option value="EA">EA</option>
-            <option value="EP">EP</option>
-            <option value="EB">EB</option>
-            <option value="EQD">EQD</option>
-            <option value="EQN">EQN</option>
+            <option value="EF">Engenharia Física (EF)</option>
+            <option value="EM">Engenharia de Materiais (EM)</option>
+            <option value="EA">Engenharia Ambiental (EA)</option>
+            <option value="EP">Engenharia de Produção (EP)</option>
+            <option value="EB">Engenharia Biomédica (EB)</option>
+            <option value="EQD">Engenharia Química Diurno (EQD)</option>
+            <option value="EQN">Engenharia Química Noturno (EQN)</option>
         </select>
     </div>
 </form>
