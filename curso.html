@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}Matriz Curricular - {{ curso.nome }}{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Grade Curricular - {{ curso.nome }}</h1>
+
+<div class="alert alert-info text-center" role="alert">
+    Selecione as disciplinas nas quais você foi reprovado. Disciplinas travadas serão destacadas em vermelho.
+</div>
+
+<div class="semestres-container d-flex flex-wrap justify-content-start">
+    {% for semestre, disciplinas in curso.disciplinas_por_semestre().items() %}
+    <div class="card semestre-card m-3 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            Semestre: {{ semestre }}
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                {% for disciplina in disciplinas %}
+                {% set disciplina_id = disciplina.codigo %}
+                <li id="disciplina-{{ disciplina_id }}" class="list-group-item disciplina-item" onclick="toggleSelecao('{{ disciplina_id }}')" onmouseover="mostrarRequisitos('{{ disciplina_id }}')" onmouseout="ocultarRequisitos('{{ disciplina_id }}')">
+                    <strong>{{ disciplina.codigo }}</strong>: {{ disciplina.nome }}
+                    <div id="requisitos-{{ disciplina_id }}" class="requisitos" style="display: none;">
+                        <strong>Requisitos:</strong>
+                        <ul class="list-group">
+                            {% for requisito in disciplina.requisitos %}
+                            <li id="requisito-{{ requisito }}" class="list-group-item">{{ requisito }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+function toggleSelecao(codigoDisciplina) {
+    var disciplinaSelecionada = document.getElementById('disciplina-' + codigoDisciplina);
+    disciplinaSelecionada.classList.toggle('disciplina-reprovada');
+    verificarTravada();
+}
+
+function mostrarRequisitos(codigoDisciplina) {
+    var requisitosDiv = document.getElementById('requisitos-' + codigoDisciplina);
+    if (requisitosDiv) {
+        requisitosDiv.style.display = 'block';
+    }
+}
+
+function ocultarRequisitos(codigoDisciplina) {
+    var requisitosDiv = document.getElementById('requisitos-' + codigoDisciplina);
+    if (requisitosDiv) {
+        requisitosDiv.style.display = 'none';
+    }
+}
+
+function verificarTravada() {
+    var disciplinas = document.querySelectorAll('.disciplina-item');
+    var reprovadas = new Set();
+    var travadas = new Set();
+
+    disciplinas.forEach(function(disciplina) {
+        if (disciplina.classList.contains('disciplina-reprovada')) {
+            reprovadas.add(disciplina.id.split('-')[1]);
+        }
+    });
+
+    function isTravada(codigoDisciplina, visitados = new Set()) {
+        if (visitados.has(codigoDisciplina)) {
+            return false;  // Evita loops infinitos em caso de dependências circulares
+        }
+        visitados.add(codigoDisciplina);
+
+        var requisitos = document.querySelectorAll('#requisitos-' + codigoDisciplina + ' li');
+        for (var requisito of requisitos) {
+            var codigoRequisito = requisito.id.split('-')[1];
+            if (reprovadas.has(codigoRequisito) || travadas.has(codigoRequisito) || isTravada(codigoRequisito, visitados)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    disciplinas.forEach(function(disciplina) {
+        var codigoDisciplina = disciplina.id.split('-')[1];
+        if (isTravada(codigoDisciplina)) {
+            disciplina.classList.add('disciplina-travada');
+            travadas.add(codigoDisciplina);
+        } else {
+            disciplina.classList.remove('disciplina-travada');
+            travadas.delete(codigoDisciplina);
+        }
+    });
+}
+</script>
+
+<style>
+.semestres-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Ajusta automaticamente o espaçamento */
+    gap: 10px; /* Espaço entre as colunas */
+}
+
+.semestre-card {
+    flex: 1 1 calc(20% - 20px); /* Ocupa 1/4 da largura disponível menos o espaço entre as colunas */
+    min-width: 200px; /* Largura mínima para garantir legibilidade */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.semestre-card:hover {
+    transform: scale(1.03);
+}
+
+.card-header {
+    padding: 10px 15px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.disciplina-reprovada {
+    background-color: #ffd700; /* Amarelo dourado */
+}
+
+.disciplina-travada {
+    background-color: #ffcccc; /* Vermelho claro para disciplinas travadas */
+}
+
+.text-center {
+    text-align: center;
+}
+
+footer {
+    margin-top: 20px;
+}
+</style>
+
+{% endblock %}
