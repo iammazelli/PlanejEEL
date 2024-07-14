@@ -20,12 +20,15 @@
                 {% for disciplina in disciplinas %}
                 {% set disciplina_id = disciplina.codigo %}
                 <li id="disciplina-{{ disciplina_id }}" class="list-group-item disciplina-item" onclick="toggleSelecao('{{ disciplina_id }}')" onmouseover="mostrarRequisitos('{{ disciplina_id }}')" onmouseout="ocultarRequisitos('{{ disciplina_id }}')">
-                    <strong>{{ disciplina.codigo }}</strong>: {{ disciplina.nome }}
+                    <strong>{{ disciplina.codigo }} - {{ disciplina.nome }}</strong>
                     <div id="requisitos-{{ disciplina_id }}" class="requisitos" style="display: none;">
                         <strong>Requisitos:</strong>
                         <ul class="list-group">
-                            {% for requisito in disciplina.requisitos %}
-                            <li id="requisito-{{ requisito }}" class="list-group-item">{{ requisito }}</li>
+                            {% for requisito_codigo in disciplina.requisitos %}
+                            {% set requisito = curso.disciplinas[requisito_codigo] %}
+                            {% if requisito %}
+                            <li id="requisito-{{ requisito.codigo }}" class="list-group-item">{{ requisito.codigo }} - {{ requisito.nome }}</li>
+                            {% endif %}
                             {% endfor %}
                         </ul>
                     </div>
