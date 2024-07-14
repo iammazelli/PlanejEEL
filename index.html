@@ -7,13 +7,13 @@
         <label for="curso_nome">Selecione um curso:</label>
         <select class="form-control" id="curso_nome" name="curso_nome" onchange="redirectToCourse(this.value)">
             <option value="" disabled selected>Selecione um curso</option>
-            <option value="EF">Engenharia Física (EF)</option>
-            <option value="EM">Engenharia de Materiais (EM)</option>
-            <option value="EA">Engenharia Ambiental (EA)</option>
-            <option value="EP">Engenharia de Produção (EP)</option>
-            <option value="EB">Engenharia Biomédica (EB)</option>
-            <option value="EQD">Engenharia Química Diurno (EQD)</option>
-            <option value="EQN">Engenharia Química Noturno (EQN)</option>
+            <option value="EF.html">Engenharia Física (EF)</option>
+            <option value="EM.html">Engenharia de Materiais (EM)</option>
+            <option value="EA.html">Engenharia Ambiental (EA)</option>
+            <option value="EP.html">Engenharia de Produção (EP)</option>
+            <option value="EB.html">Engenharia Bioquímica (EB)</option>
+            <option value="EQD.html">Engenharia Química Diurno (EQD)</option>
+            <option value="EQN.html">Engenharia Química Noturno (EQN)</option>
         </select>
     </div>
 </form>
@@ -21,8 +21,7 @@
 <script>
     function redirectToCourse(curso) {
         if (curso) {
-            var url = "{{ url_for('static', filename='') }}" + curso.toLowerCase() + ".html";
-            window.location.href = url;
+            window.location.href = curso;
         }
     }
 </script>
