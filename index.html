@@ -1,28 +1,35 @@
-{% extends "base.html" %}
-{% block title %}Cursos{% endblock %}
-{% block content %}
-<h1>Cursos Disponíveis</h1>
-<form>
-    <div class="form-group">
-        <label for="curso_nome">Selecione um curso:</label>
-        <select class="form-control" id="curso_nome" name="curso_nome" onchange="redirectToCourse(this.value)">
-            <option value="" disabled selected>Selecione um curso</option>
-            <option value="EF.html">Engenharia Física (EF)</option>
-            <option value="EM.html">Engenharia de Materiais (EM)</option>
-            <option value="EA.html">Engenharia Ambiental (EA)</option>
-            <option value="EP.html">Engenharia de Produção (EP)</option>
-            <option value="EB.html">Engenharia Bioquímica (EB)</option>
-            <option value="EQD.html">Engenharia Química Diurno (EQD)</option>
-            <option value="EQN.html">Engenharia Química Noturno (EQN)</option>
-        </select>
-    </div>
-</form>
 
-<script>
-    function redirectToCourse(curso) {
-        if (curso) {
-            window.location.href = curso;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+</head>
+<body>
+    <h1>Cursos Disponíveis</h1>
+    <form>
+        <div class="form-group">
+            <label for="curso_nome">Selecione um curso:</label>
+            <select class="form-control" id="curso_nome" name="curso_nome" onchange="redirectToCourse(this.value)">
+                <option value="" disabled selected>Selecione um curso</option>
+                <option value="EF.html">Engenharia Física (EF)</option>
+                <option value="EM.html">Engenharia de Materiais (EM)</option>
+                <option value="EA.html">Engenharia Ambiental (EA)</option>
+                <option value="EP.html">Engenharia de Produção (EP)</option>
+                <option value="EB.html">Engenharia Biomédica (EB)</option>
+                <option value="EQD.html">Engenharia Química Diurno (EQD)</option>
+                <option value="EQN.html">Engenharia Química Noturno (EQN)</option>
+            </select>
+        </div>
+    </form>
+
+    <script>
+        function redirectToCourse(curso) {
+            if (curso) {
+                window.location.href = curso;
+            }
         }
-    }
-</script>
-{% endblock %}
+    </script>
+</body>
+</html>
