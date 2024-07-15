@@ -1353,7 +1353,7 @@ window.addEventListener('resize', ajustarLayout);
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    width: flex;
+    width: auto;
     max-width: 100vw; /* Largura máxima do container igual à largura da viewport */
     margin: 0 auto; /* Centraliza o container na página */
 }
@@ -1361,7 +1361,7 @@ window.addEventListener('resize', ajustarLayout);
 /* Estilos para cada cartão de semestre */
 .semestre-card {
     flex: 2 1 calc(20% - 20px); /* Cada card ocupa metade da largura disponível menos o espaço entre as colunas */
-    width: 200px;
+    min-width: 300px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
