@@ -53,12 +53,6 @@ def carregar_cursos_do_yaml(url_yaml):
 def carregar_disciplinas_do_json(curso_nome):
     try:
         url_json = f"https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/{curso_nome}.json"
-        
-        # Verifica se o arquivo JSON existe antes de tentar carregar
-        if not os.path.exists(f"{curso_nome}.json"):
-            print(f"Arquivo JSON para o curso {curso_nome} não encontrado.")
-            return None
-        
         response = requests.get(url_json)
         if response.status_code == 200:
             dados_json = response.json()
@@ -83,6 +77,7 @@ def carregar_disciplinas_do_json(curso_nome):
     except Exception as e:
         print(f"Erro ao carregar disciplinas do JSON para o curso {curso_nome}: {e}")
         return None
+
 
 def limpar_codigo(codigo):
     return re.sub(r'\W+', '', codigo)
