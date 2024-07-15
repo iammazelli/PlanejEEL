@@ -1,0 +1,1511 @@
+
+           <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz Curricular - EF</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 2000px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+            width: auto; /* Largura automática */
+            margin: auto; /* Margens automáticas para centralização */
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007BFF;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+<div class="container-fluid">
+    <h1 class="text-center mt-4 mb-5">Grade Curricular - EF</h1>
+
+    <div class="alert alert-info text-center" role="alert">
+        Selecione as disciplinas nas quais você foi reprovado. Disciplinas travadas serão destacadas em vermelho.
+    </div>
+
+    <div class="semestres-container">
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 1
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOB1003" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1003')" onmouseover="mostrarRequisitos('LOB1003')" onmouseout="ocultarRequisitos('LOB1003')">
+                        <strong>LOB1003 -  Calculo I</strong>
+                        <div id="requisitos-LOB1003" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1008" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1008')" onmouseover="mostrarRequisitos('LOB1008')" onmouseout="ocultarRequisitos('LOB1008')">
+                        <strong>LOB1008 -  Ciencia, Tecnologia e Sociedade</strong>
+                        <div id="requisitos-LOB1008" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1018" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1018')" onmouseover="mostrarRequisitos('LOB1018')" onmouseout="ocultarRequisitos('LOB1018')">
+                        <strong>LOB1018 -  Fisica I</strong>
+                        <div id="requisitos-LOB1018" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1036" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1036')" onmouseover="mostrarRequisitos('LOB1036')" onmouseout="ocultarRequisitos('LOB1036')">
+                        <strong>LOB1036 -  Geometria Analitica</strong>
+                        <div id="requisitos-LOB1036" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1038" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1038')" onmouseover="mostrarRequisitos('LOB1038')" onmouseout="ocultarRequisitos('LOB1038')">
+                        <strong>LOB1038 -  Fisica Experimental I</strong>
+                        <div id="requisitos-LOB1038" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3218" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3218')" onmouseover="mostrarRequisitos('LOM3218')" onmouseout="ocultarRequisitos('LOM3218')">
+                        <strong>LOM3218 -  Introducao a Engenharia Fisica</strong>
+                        <div id="requisitos-LOM3218" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3260" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3260')" onmouseover="mostrarRequisitos('LOM3260')" onmouseout="ocultarRequisitos('LOM3260')">
+                        <strong>LOM3260 -  Computacao Cientifica em Python</strong>
+                        <div id="requisitos-LOM3260" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOQ4100" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4100')" onmouseover="mostrarRequisitos('LOQ4100')" onmouseout="ocultarRequisitos('LOQ4100')">
+                        <strong>LOQ4100 -  Fundamentos de Quimica para Engenharia I-B</strong>
+                        <div id="requisitos-LOQ4100" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 2
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOB1004" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1004')" onmouseover="mostrarRequisitos('LOB1004')" onmouseout="ocultarRequisitos('LOB1004')">
+                        <strong>LOB1004 -  Calculo II</strong>
+                        <div id="requisitos-LOB1004" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1003" class="list-group-item">LOB1003 -  Calculo I</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1036" class="list-group-item">LOB1036 -  Geometria Analitica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1019" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1019')" onmouseover="mostrarRequisitos('LOB1019')" onmouseout="ocultarRequisitos('LOB1019')">
+                        <strong>LOB1019 -  Fisica II</strong>
+                        <div id="requisitos-LOB1019" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1003" class="list-group-item">LOB1003 -  Calculo I</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1018" class="list-group-item">LOB1018 -  Fisica I</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1037" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1037')" onmouseover="mostrarRequisitos('LOB1037')" onmouseout="ocultarRequisitos('LOB1037')">
+                        <strong>LOB1037 -  Algebra Linear</strong>
+                        <div id="requisitos-LOB1037" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1036" class="list-group-item">LOB1036 -  Geometria Analitica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1041" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1041')" onmouseover="mostrarRequisitos('LOB1041')" onmouseout="ocultarRequisitos('LOB1041')">
+                        <strong>LOB1041 -  Fisica Experimental II</strong>
+                        <div id="requisitos-LOB1041" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1018" class="list-group-item">LOB1018 -  Fisica I</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1038" class="list-group-item">LOB1038 -  Fisica Experimental I</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1045" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1045')" onmouseover="mostrarRequisitos('LOB1045')" onmouseout="ocultarRequisitos('LOB1045')">
+                        <strong>LOB1045 -  Leitura e Producao de Textos Academicos</strong>
+                        <div id="requisitos-LOB1045" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3204" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3204')" onmouseover="mostrarRequisitos('LOM3204')" onmouseout="ocultarRequisitos('LOM3204')">
+                        <strong>LOM3204 -  Desenho Tecnico e Projeto Assistido por Computador</strong>
+                        <div id="requisitos-LOM3204" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3240" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3240')" onmouseover="mostrarRequisitos('LOM3240')" onmouseout="ocultarRequisitos('LOM3240')">
+                        <strong>LOM3240 -  Quimica Inorganica Fundamental e Aplicada</strong>
+                        <div id="requisitos-LOM3240" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOQ4100" class="list-group-item">LOQ4100 -  Fundamentos de Quimica para Engenharia I-B</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOQ4095" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4095')" onmouseover="mostrarRequisitos('LOQ4095')" onmouseout="ocultarRequisitos('LOQ4095')">
+                        <strong>LOQ4095 -  Quimica Geral Experimental</strong>
+                        <div id="requisitos-LOQ4095" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOQ4100" class="list-group-item">LOQ4100 -  Fundamentos de Quimica para Engenharia I-B</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 3
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOB1006" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1006')" onmouseover="mostrarRequisitos('LOB1006')" onmouseout="ocultarRequisitos('LOB1006')">
+                        <strong>LOB1006 -  Calculo IV</strong>
+                        <div id="requisitos-LOB1006" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1004" class="list-group-item">LOB1004 -  Calculo II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1037" class="list-group-item">LOB1037 -  Algebra Linear</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1039" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1039')" onmouseover="mostrarRequisitos('LOB1039')" onmouseout="ocultarRequisitos('LOB1039')">
+                        <strong>LOB1039 -  Fisica Experimental III</strong>
+                        <div id="requisitos-LOB1039" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1038" class="list-group-item">LOB1038 -  Fisica Experimental I</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1052" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1052')" onmouseover="mostrarRequisitos('LOB1052')" onmouseout="ocultarRequisitos('LOB1052')">
+                        <strong>LOB1052 -  Calculo III</strong>
+                        <div id="requisitos-LOB1052" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1004" class="list-group-item">LOB1004 -  Calculo II</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1053" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1053')" onmouseover="mostrarRequisitos('LOB1053')" onmouseout="ocultarRequisitos('LOB1053')">
+                        <strong>LOB1053 -  Fisica III</strong>
+                        <div id="requisitos-LOB1053" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1004" class="list-group-item">LOB1004 -  Calculo II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1019" class="list-group-item">LOB1019 -  Fisica II</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3016" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3016')" onmouseover="mostrarRequisitos('LOM3016')" onmouseout="ocultarRequisitos('LOM3016')">
+                        <strong>LOM3016 -  Introducao a  Ciencia dos Materiais</strong>
+                        <div id="requisitos-LOM3016" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3236" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3236')" onmouseover="mostrarRequisitos('LOM3236')" onmouseout="ocultarRequisitos('LOM3236')">
+                        <strong>LOM3236 -  Processos de Fabricacao</strong>
+                        <div id="requisitos-LOM3236" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3204" class="list-group-item">LOM3204 -  Desenho Tecnico e Projeto Assistido por Computador</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3241" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3241')" onmouseover="mostrarRequisitos('LOM3241')" onmouseout="ocultarRequisitos('LOM3241')">
+                        <strong>LOM3241 -  Quimica de Materiais</strong>
+                        <div id="requisitos-LOM3241" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3240" class="list-group-item">LOM3240 -  Quimica Inorganica Fundamental e Aplicada</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3257" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3257')" onmouseover="mostrarRequisitos('LOM3257')" onmouseout="ocultarRequisitos('LOM3257')">
+                        <strong>LOM3257 -  Mecanica Classica</strong>
+                        <div id="requisitos-LOM3257" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1004" class="list-group-item">LOB1004 -  Calculo II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1018" class="list-group-item">LOB1018 -  Fisica I</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 4
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOB1012" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1012')" onmouseover="mostrarRequisitos('LOB1012')" onmouseout="ocultarRequisitos('LOB1012')">
+                        <strong>LOB1012 -  Estatistica</strong>
+                        <div id="requisitos-LOB1012" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1004" class="list-group-item">LOB1004 -  Calculo II</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1021" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1021')" onmouseover="mostrarRequisitos('LOB1021')" onmouseout="ocultarRequisitos('LOB1021')">
+                        <strong>LOB1021 -  Fisica IV</strong>
+                        <div id="requisitos-LOB1021" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1052" class="list-group-item">LOB1052 -  Calculo III</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1053" class="list-group-item">LOB1053 -  Fisica III</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1042" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1042')" onmouseover="mostrarRequisitos('LOB1042')" onmouseout="ocultarRequisitos('LOB1042')">
+                        <strong>LOB1042 -  Fisica Experimental IV</strong>
+                        <div id="requisitos-LOB1042" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1039" class="list-group-item">LOB1039 -  Fisica Experimental III</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3205" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3205')" onmouseover="mostrarRequisitos('LOM3205')" onmouseout="ocultarRequisitos('LOM3205')">
+                        <strong>LOM3205 -  Eletromagnetismo</strong>
+                        <div id="requisitos-LOM3205" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1052" class="list-group-item">LOB1052 -  Calculo III</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1053" class="list-group-item">LOB1053 -  Fisica III</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3253" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3253')" onmouseover="mostrarRequisitos('LOM3253')" onmouseout="ocultarRequisitos('LOM3253')">
+                        <strong>LOM3253 -  Fisica Matematica</strong>
+                        <div id="requisitos-LOM3253" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1003" class="list-group-item">LOB1003 -  Calculo I</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1006" class="list-group-item">LOB1006 -  Calculo IV</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3261" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3261')" onmouseover="mostrarRequisitos('LOM3261')" onmouseout="ocultarRequisitos('LOM3261')">
+                        <strong>LOM3261 -  Metodos Numericos e Aplicacoes</strong>
+                        <div id="requisitos-LOM3261" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1004" class="list-group-item">LOB1004 -  Calculo II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3260" class="list-group-item">LOM3260 -  Computacao Cientifica em Python</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3262" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3262')" onmouseover="mostrarRequisitos('LOM3262')" onmouseout="ocultarRequisitos('LOM3262')">
+                        <strong>LOM3262 -  Circuitos Eletricos - teoria e pratica</strong>
+                        <div id="requisitos-LOM3262" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1006" class="list-group-item">LOB1006 -  Calculo IV</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3269" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3269')" onmouseover="mostrarRequisitos('LOM3269')" onmouseout="ocultarRequisitos('LOM3269')">
+                        <strong>LOM3269 -  Fenomenos de Transporte</strong>
+                        <div id="requisitos-LOM3269" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1004" class="list-group-item">LOB1004 -  Calculo II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1019" class="list-group-item">LOB1019 -  Fisica II</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 5
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOM3081" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3081')" onmouseover="mostrarRequisitos('LOM3081')" onmouseout="ocultarRequisitos('LOM3081')">
+                        <strong>LOM3081 -  Introducao a Mecanica dos Solidos</strong>
+                        <div id="requisitos-LOM3081" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3257" class="list-group-item">LOM3257 -  Mecanica Classica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3217" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3217')" onmouseover="mostrarRequisitos('LOM3217')" onmouseout="ocultarRequisitos('LOM3217')">
+                        <strong>LOM3217 -  Fisica Estatistica</strong>
+                        <div id="requisitos-LOM3217" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1019" class="list-group-item">LOB1019 -  Fisica II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1052" class="list-group-item">LOB1052 -  Calculo III</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3226" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3226')" onmouseover="mostrarRequisitos('LOM3226')" onmouseout="ocultarRequisitos('LOM3226')">
+                        <strong>LOM3226 -  Mecanica Quantica</strong>
+                        <div id="requisitos-LOM3226" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1021" class="list-group-item">LOB1021 -  Fisica IV</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3253" class="list-group-item">LOM3253 -  Fisica Matematica</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3257" class="list-group-item">LOM3257 -  Mecanica Classica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3227" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3227')" onmouseover="mostrarRequisitos('LOM3227')" onmouseout="ocultarRequisitos('LOM3227')">
+                        <strong>LOM3227 -  Metodos Computacionais da Fisica</strong>
+                        <div id="requisitos-LOM3227" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3260" class="list-group-item">LOM3260 -  Computacao Cientifica em Python</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1006" class="list-group-item">LOB1006 -  Calculo IV</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3228" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3228')" onmouseover="mostrarRequisitos('LOM3228')" onmouseout="ocultarRequisitos('LOM3228')">
+                        <strong>LOM3228 -  Metodos Experimentais da Fisica I</strong>
+                        <div id="requisitos-LOM3228" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1019" class="list-group-item">LOB1019 -  Fisica II</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3243" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3243')" onmouseover="mostrarRequisitos('LOM3243')" onmouseout="ocultarRequisitos('LOM3243')">
+                        <strong>LOM3243 -  Seminarios em Engenharia Fisica</strong>
+                        <div id="requisitos-LOM3243" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3263" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3263')" onmouseover="mostrarRequisitos('LOM3263')" onmouseout="ocultarRequisitos('LOM3263')">
+                        <strong>LOM3263 -  Eletronica Fundamental e Aplicada</strong>
+                        <div id="requisitos-LOM3263" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3262" class="list-group-item">LOM3262 -  Circuitos Eletricos - teoria e pratica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOQ4234" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4234')" onmouseover="mostrarRequisitos('LOQ4234')" onmouseout="ocultarRequisitos('LOQ4234')">
+                        <strong>LOQ4234 -  Empreendedorismo e Inovacao</strong>
+                        <div id="requisitos-LOQ4234" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 6
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOM3049" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3049')" onmouseover="mostrarRequisitos('LOM3049')" onmouseout="ocultarRequisitos('LOM3049')">
+                        <strong>LOM3049 -  Termodinamica de Maquinas</strong>
+                        <div id="requisitos-LOM3049" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3215" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3215')" onmouseover="mostrarRequisitos('LOM3215')" onmouseout="ocultarRequisitos('LOM3215')">
+                        <strong>LOM3215 -  Fisica do Estado Solido</strong>
+                        <div id="requisitos-LOM3215" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3226" class="list-group-item">LOM3226 -  Mecanica Quantica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3229" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3229')" onmouseover="mostrarRequisitos('LOM3229')" onmouseout="ocultarRequisitos('LOM3229')">
+                        <strong>LOM3229 -  Metodos Experimentais da Fisica II</strong>
+                        <div id="requisitos-LOM3229" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3246" class="list-group-item">LOM3246 -  Tecnicas de Caracterizacao de Materiais</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1021" class="list-group-item">LOB1021 -  Fisica IV</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3016" class="list-group-item">LOM3016 -  Introducao a  Ciencia dos Materiais</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3233" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3233')" onmouseover="mostrarRequisitos('LOM3233')" onmouseout="ocultarRequisitos('LOM3233')">
+                        <strong>LOM3233 -  Microprocessadores</strong>
+                        <div id="requisitos-LOM3233" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3263" class="list-group-item">LOM3263 -  Eletronica Fundamental e Aplicada</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3234" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3234')" onmouseover="mostrarRequisitos('LOM3234')" onmouseout="ocultarRequisitos('LOM3234')">
+                        <strong>LOM3234 -  Optica Fisica</strong>
+                        <div id="requisitos-LOM3234" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1021" class="list-group-item">LOB1021 -  Fisica IV</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3205" class="list-group-item">LOM3205 -  Eletromagnetismo</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3238" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3238')" onmouseover="mostrarRequisitos('LOM3238')" onmouseout="ocultarRequisitos('LOM3238')">
+                        <strong>LOM3238 -  Projeto Integrado</strong>
+                        <div id="requisitos-LOM3238" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1008" class="list-group-item">LOB1008 -  Ciencia, Tecnologia e Sociedade</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1045" class="list-group-item">LOB1045 -  Leitura e Producao de Textos Academicos</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3246" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3246')" onmouseover="mostrarRequisitos('LOM3246')" onmouseout="ocultarRequisitos('LOM3246')">
+                        <strong>LOM3246 -  Tecnicas de Caracterizacao de Materiais</strong>
+                        <div id="requisitos-LOM3246" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3229" class="list-group-item">LOM3229 -  Metodos Experimentais da Fisica II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1021" class="list-group-item">LOB1021 -  Fisica IV</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3016" class="list-group-item">LOM3016 -  Introducao a  Ciencia dos Materiais</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 7
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOM3223" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3223')" onmouseover="mostrarRequisitos('LOM3223')" onmouseout="ocultarRequisitos('LOM3223')">
+                        <strong>LOM3223 -  Materiais e Dispositivos Magneticos e Supercondutores</strong>
+                        <div id="requisitos-LOM3223" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3215" class="list-group-item">LOM3215 -  Fisica do Estado Solido</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3263" class="list-group-item">LOM3263 -  Eletronica Fundamental e Aplicada</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3230" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3230')" onmouseover="mostrarRequisitos('LOM3230')" onmouseout="ocultarRequisitos('LOM3230')">
+                        <strong>LOM3230 -  Metodos Experimentais da Fisica III</strong>
+                        <div id="requisitos-LOM3230" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3215" class="list-group-item">LOM3215 -  Fisica do Estado Solido</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3264" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3264')" onmouseover="mostrarRequisitos('LOM3264')" onmouseout="ocultarRequisitos('LOM3264')">
+                        <strong>LOM3264 -  Fundamentos de Controle</strong>
+                        <div id="requisitos-LOM3264" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3227" class="list-group-item">LOM3227 -  Metodos Computacionais da Fisica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOQ4050" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4050')" onmouseover="mostrarRequisitos('LOQ4050')" onmouseout="ocultarRequisitos('LOQ4050')">
+                        <strong>LOQ4050 -  Engenharia Economica</strong>
+                        <div id="requisitos-LOQ4050" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1012" class="list-group-item">LOB1012 -  Estatistica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOQ4257" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4257')" onmouseover="mostrarRequisitos('LOQ4257')" onmouseout="ocultarRequisitos('LOQ4257')">
+                        <strong>LOQ4257 -  Gestao de Projetos</strong>
+                        <div id="requisitos-LOQ4257" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 8
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOM3219" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3219')" onmouseover="mostrarRequisitos('LOM3219')" onmouseout="ocultarRequisitos('LOM3219')">
+                        <strong>LOM3219 -  Introducao a Nanotecnologia</strong>
+                        <div id="requisitos-LOM3219" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3215" class="list-group-item">LOM3215 -  Fisica do Estado Solido</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3229" class="list-group-item">LOM3229 -  Metodos Experimentais da Fisica II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3246" class="list-group-item">LOM3246 -  Tecnicas de Caracterizacao de Materiais</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3259" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3259')" onmouseover="mostrarRequisitos('LOM3259')" onmouseout="ocultarRequisitos('LOM3259')">
+                        <strong>LOM3259 -  Materiais e Dispositivos Eletronicos</strong>
+                        <div id="requisitos-LOM3259" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3263" class="list-group-item">LOM3263 -  Eletronica Fundamental e Aplicada</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3215" class="list-group-item">LOM3215 -  Fisica do Estado Solido</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3234" class="list-group-item">LOM3234 -  Optica Fisica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3265" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3265')" onmouseover="mostrarRequisitos('LOM3265')" onmouseout="ocultarRequisitos('LOM3265')">
+                        <strong>LOM3265 -  Automacao</strong>
+                        <div id="requisitos-LOM3265" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3264" class="list-group-item">LOM3264 -  Fundamentos de Controle</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3266" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3266')" onmouseover="mostrarRequisitos('LOM3266')" onmouseout="ocultarRequisitos('LOM3266')">
+                        <strong>LOM3266 -  Fotonica Integrada</strong>
+                        <div id="requisitos-LOM3266" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1053" class="list-group-item">LOB1053 -  Fisica III</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3267" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3267')" onmouseover="mostrarRequisitos('LOM3267')" onmouseout="ocultarRequisitos('LOM3267')">
+                        <strong>LOM3267 -  Trabalho de Graduacao I</strong>
+                        <div id="requisitos-LOM3267" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3238" class="list-group-item">LOM3238 -  Projeto Integrado</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOQ4209" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4209')" onmouseover="mostrarRequisitos('LOQ4209')" onmouseout="ocultarRequisitos('LOQ4209')">
+                        <strong>LOQ4209 -  Engenharia da Qualidade</strong>
+                        <div id="requisitos-LOQ4209" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1012" class="list-group-item">LOB1012 -  Estatistica</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 9
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOB1010" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1010')" onmouseover="mostrarRequisitos('LOB1010')" onmouseout="ocultarRequisitos('LOB1010')">
+                        <strong>LOB1010 -  Direito  Aplicado a Engenharia</strong>
+                        <div id="requisitos-LOB1010" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1008" class="list-group-item">LOB1008 -  Ciencia, Tecnologia e Sociedade</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOB1031" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1031')" onmouseover="mostrarRequisitos('LOB1031')" onmouseout="ocultarRequisitos('LOB1031')">
+                        <strong>LOB1031 -  Psicologia Organizacional e do Trabalho</strong>
+                        <div id="requisitos-LOB1031" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOB1008" class="list-group-item">LOB1008 -  Ciencia, Tecnologia e Sociedade</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="disciplina-LOM3250" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3250')" onmouseover="mostrarRequisitos('LOM3250')" onmouseout="ocultarRequisitos('LOM3250')">
+                        <strong>LOM3250 -  Trabalho de Graduacao II</strong>
+                        <div id="requisitos-LOM3250" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3267" class="list-group-item">LOM3267 -  Trabalho de Graduacao I</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card semestre-card m-3 shadow">
+            <div class="card-header bg-primary text-white">
+                Semestre: 10
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    
+                    
+                    <li id="disciplina-LOM3210" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3210')" onmouseover="mostrarRequisitos('LOM3210')" onmouseout="ocultarRequisitos('LOM3210')">
+                        <strong>LOM3210 -  Estagio Supervisionado</strong>
+                        <div id="requisitos-LOM3210" class="requisitos">
+                            <strong>Requisitos:</strong>
+                            <ul class="list-group">
+                                
+                                
+                                
+                                <li id="requisito-LOM3236" class="list-group-item">LOM3236 -  Processos de Fabricacao</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1053" class="list-group-item">LOB1053 -  Fisica III</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1045" class="list-group-item">LOB1045 -  Leitura e Producao de Textos Academicos</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1036" class="list-group-item">LOB1036 -  Geometria Analitica</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1037" class="list-group-item">LOB1037 -  Algebra Linear</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1042" class="list-group-item">LOB1042 -  Fisica Experimental IV</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1039" class="list-group-item">LOB1039 -  Fisica Experimental III</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1018" class="list-group-item">LOB1018 -  Fisica I</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1021" class="list-group-item">LOB1021 -  Fisica IV</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3016" class="list-group-item">LOM3016 -  Introducao a  Ciencia dos Materiais</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3204" class="list-group-item">LOM3204 -  Desenho Tecnico e Projeto Assistido por Computador</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1012" class="list-group-item">LOB1012 -  Estatistica</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1038" class="list-group-item">LOB1038 -  Fisica Experimental I</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1052" class="list-group-item">LOB1052 -  Calculo III</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1008" class="list-group-item">LOB1008 -  Ciencia, Tecnologia e Sociedade</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1041" class="list-group-item">LOB1041 -  Fisica Experimental II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3240" class="list-group-item">LOM3240 -  Quimica Inorganica Fundamental e Aplicada</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOQ4095" class="list-group-item">LOQ4095 -  Quimica Geral Experimental</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3218" class="list-group-item">LOM3218 -  Introducao a Engenharia Fisica</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOQ4100" class="list-group-item">LOQ4100 -  Fundamentos de Quimica para Engenharia I-B</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1004" class="list-group-item">LOB1004 -  Calculo II</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1003" class="list-group-item">LOB1003 -  Calculo I</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1006" class="list-group-item">LOB1006 -  Calculo IV</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOM3260" class="list-group-item">LOM3260 -  Computacao Cientifica em Python</li>
+                                
+                                
+                                
+                                
+                                <li id="requisito-LOB1019" class="list-group-item">LOB1019 -  Fisica II</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+function toggleSelecao(codigoDisciplina) {
+    var disciplinaSelecionada = document.getElementById('disciplina-' + codigoDisciplina);
+    disciplinaSelecionada.classList.toggle('disciplina-reprovada');
+    verificarTravada();
+}
+
+function mostrarRequisitos(codigoDisciplina) {
+    var requisitosDiv = document.getElementById('requisitos-' + codigoDisciplina);
+    if (requisitosDiv) {
+        requisitosDiv.style.display = 'block';
+    }
+}
+
+function ocultarRequisitos(codigoDisciplina) {
+    var requisitosDiv = document.getElementById('requisitos-' + codigoDisciplina);
+    if (requisitosDiv) {
+        requisitosDiv.style.display = 'none';
+    }
+}
+
+function verificarTravada() {
+    var disciplinas = document.querySelectorAll('.disciplina-item');
+    var reprovadas = new Set();
+    var travadas = new Set();
+
+    disciplinas.forEach(function(disciplina) {
+        if (disciplina.classList.contains('disciplina-reprovada')) {
+            reprovadas.add(disciplina.id.split('-')[1]);
+        }
+    });
+
+    function isTravada(codigoDisciplina, visitados = new Set()) {
+        if (visitados.has(codigoDisciplina)) {
+            return false;  // Evita loops infinitos em caso de dependências circulares
+        }
+        visitados.add(codigoDisciplina);
+
+        var requisitos = document.querySelectorAll('#requisitos-' + codigoDisciplina + ' li');
+        for (var requisito of requisitos) {
+            var codigoRequisito = requisito.id.split('-')[1];
+            if (reprovadas.has(codigoRequisito) || travadas.has(codigoRequisito) || isTravada(codigoRequisito, visitados)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    disciplinas.forEach(function(disciplina) {
+        var codigoDisciplina = disciplina.id.split('-')[1];
+        if (isTravada(codigoDisciplina)) {
+            disciplina.classList.add('disciplina-travada');
+            travadas.add(codigoDisciplina);
+        } else {
+            disciplina.classList.remove('disciplina-travada');
+            travadas.delete(codigoDisciplina);
+        }
+    });
+}
+
+// Adiciona classe ao body baseado na largura da viewport
+function ajustarLayout() {
+    var viewportWidth = window.innerWidth;
+    var semestreContainer = document.querySelector('.semestres-container');
+    
+    if (viewportWidth >= 1200) {
+        semestreContainer.classList.add('colunas-full');
+    } else {
+        semestreContainer.classList.remove('colunas-full');
+    }
+}
+
+window.addEventListener('load', ajustarLayout);
+window.addEventListener('resize', ajustarLayout);
+
+</script>
+
+<style>
+/* Estilos para o container principal dos semestres */
+.semestres-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: flex;
+    max-width: 100vw; /* Largura máxima do container igual à largura da viewport */
+    margin: 0 auto; /* Centraliza o container na página */
+}
+
+/* Estilos para cada cartão de semestre */
+.semestre-card {
+    flex: 2 1 calc(17.5% - 20px); /* Cada card ocupa metade da largura disponível menos o espaço entre as colunas */
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.semestre-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.requisitos {
+    margin-top: 10px;
+    display: none;
+}
+
+.disciplina-reprovada {
+    background-color: #ffd700;
+}
+
+.disciplina-travada {
+    background-color: #ffcccc;
+}
+
+.text-center {
+    text-align: center;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+/* Layout responsivo baseado na largura da viewport */
+.colunas-quatro {
+    justify-content: space-between;
+}
+
+.colunas-dois {
+    justify-content: space-between;
+}
+
+.colunas-um {
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .colunas-full {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .semestre-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 991px) {
+    .semestre-card {
+        flex: 1 1 100%;
+    }
+}
+</style>
+
+
+    </div>
+    <footer class="text-center mt-4">
+        <p>&copy; Desenvolvido por Derick Mazelli Barbosa</p>
+    </footer>
+    <!-- Bootstrap JS e jQuery (opcional, se necessário) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-7Hv3/Z85FPbYyNzPPjZOzmKJ32c1gOO6Z4NluzTf8qLXYlZ6Yp1k1IR8kXCSFm+x" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+JrUkPPSk/aJ7tmOGfrG/CJoA6E76Pcjz5H" crossorigin="anonymous"></script>
+</body>
+</html>
