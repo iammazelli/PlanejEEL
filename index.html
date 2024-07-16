@@ -1,76 +1,79 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html lang="pt-br"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos Disponíveis</title>
+    <title>Cursos</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Custom CSS -->
     <style>
         body {
             background-color: #f8f9fa;
-            padding: 50px;
+            padding: 20px;
         }
         .container {
-            max-width: 600px;
+            max-width: 2000px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             padding: 30px;
+            margin-top: 20px;
+            width: auto; /* Largura automática */
+            margin: auto; /* Margens automáticas para centralização */
         }
         h1 {
             text-align: center;
             margin-bottom: 30px;
             color: #007BFF;
         }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-control {
-            border: 1px solid #007BFF;
-            color: #007BFF;
-        }
-        .form-control:focus {
-            border-color: #007BFF;
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        footer {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Cursos Disponíveis</h1>
-        <form>
-            <div class="form-group">
-                <label for="curso_nome">Selecione um curso:</label>
-                <select class="form-control" id="curso_nome" name="curso_nome" onchange="redirectToCourse(this.value)">
-                    <option value="" disabled selected>Selecione um curso</option>
-                    <option value="EF.html">Engenharia Física (EF)</option>
-                    <option value="EM.html">Engenharia de Materiais (EM)</option>
-                    <option value="EA.html">Engenharia Ambiental (EA)</option>
-                    <option value="EP.html">Engenharia de Produção (EP)</option>
-                    <option value="EB.html">Engenharia Bioquímica (EB)</option>
-                    <option value="EQD.html">Engenharia Química Diurno (EQD)</option>
-                    <option value="EQN.html">Engenharia Química Noturno (EQN)</option>
-                </select>
-            </div>
-        </form>
+        
+<h1>Cursos Disponíveis</h1>
+<form action="/curso" method="get">
+    <div class="form-group">
+        <label for="curso_nome">Selecione um curso:</label>
+        <select class="form-control" id="curso_nome" name="curso_nome" onchange="redirectToCourse(this.value)">
+            <option value="">Selecione um curso</option>
+            
+            <option value="EF">EF</option>
+            
+            <option value="EM">EM</option>
+            
+            <option value="EA">EA</option>
+            
+            <option value="EB">EB</option>
+            
+            <option value="EP">EP</option>
+            
+            <option value="EQD">EQD</option>
+            
+            <option value="EQN">EQN</option>
+            
+        </select>
     </div>
+</form>
 
+<script>
+    function redirectToCourse(cursoNome) {
+        if (cursoNome) {
+            window.location.href = "/curso?curso_nome=" + encodeURIComponent(cursoNome);
+        }
+    }
+</script>
+
+    </div>
+    <footer class="text-center mt-4">
+        <p>© Desenvolvido por Derick Mazelli Barbosa</p>
+    </footer>
     <!-- Bootstrap JS e jQuery (opcional, se necessário) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-7Hv3/Z85FPbYyNzPPjZOzmKJ32c1gOO6Z4NluzTf8qLXYlZ6Yp1k1IR8kXCSFm+x" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+JrUkPPSk/aJ7tmOGfrG/CJoA6E76Pcjz5H" crossorigin="anonymous"></script>
 
-    <script>
-        function redirectToCourse(curso) {
-            if (curso) {
-                window.location.href = curso;
-            }
-        }
-    </script>
-</body>
-    <footer class="text-center mt-4">
-      <p>&copy; Desenvolvido por Derick Mazelli Barbosa <p>
-    </footer>
-</html>
+</body></html>
