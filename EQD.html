@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0042)http://127.0.0.1:5000/curso?curso_nome=EQD -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matriz Curricular - EQD</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./EQD_files/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Custom CSS -->
     <style>
         body {
             background-color: #f8f9fa;
-            padding: 10px;
+            padding: 20px;
         }
         .container {
-            max-width: calc(100% - 30px);
-            min-width: flex;
+            max-width: 2000px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             padding: 30px;
             margin-top: 20px;
-            margin: 0 auto; /* Margens automáticas para centralização */
+            width: auto; /* Largura automática */
+            margin: auto; /* Margens automáticas para centralização */
         }
         h1 {
             text-align: center;
@@ -43,7 +43,7 @@
         Selecione as disciplinas nas quais você foi reprovado. Disciplinas travadas serão destacadas em vermelho.
     </div>
 
-    <div class="semestres-container">
+    <div class="semestres-container colunas-full">
         
         <div class="card semestre-card m-3 shadow">
             <div class="card-header bg-primary text-white">
@@ -53,7 +53,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1003" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1003')" onmouseover="mostrarRequisitos('LOB1003')" onmouseout="ocultarRequisitos('LOB1003')">
+                    <li id="disciplina-LOB1003" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1003&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1003&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1003&#39;)">
                         <strong>LOB1003 -  Calculo I</strong>
                         <div id="requisitos-LOB1003" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -64,7 +64,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1009" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1009')" onmouseover="mostrarRequisitos('LOB1009')" onmouseout="ocultarRequisitos('LOB1009')">
+                    <li id="disciplina-LOB1009" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1009&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1009&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1009&#39;)">
                         <strong>LOB1009 -  Leitura e Interpretacao de Desenho Tecnico</strong>
                         <div id="requisitos-LOB1009" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -75,7 +75,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1018" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1018')" onmouseover="mostrarRequisitos('LOB1018')" onmouseout="ocultarRequisitos('LOB1018')">
+                    <li id="disciplina-LOB1018" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1018&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1018&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1018&#39;)">
                         <strong>LOB1018 -  Fisica I</strong>
                         <div id="requisitos-LOB1018" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -86,7 +86,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1036" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1036')" onmouseover="mostrarRequisitos('LOB1036')" onmouseout="ocultarRequisitos('LOB1036')">
+                    <li id="disciplina-LOB1036" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1036&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1036&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1036&#39;)">
                         <strong>LOB1036 -  Geometria Analitica</strong>
                         <div id="requisitos-LOB1036" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -97,7 +97,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1038" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1038')" onmouseover="mostrarRequisitos('LOB1038')" onmouseout="ocultarRequisitos('LOB1038')">
+                    <li id="disciplina-LOB1038" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1038&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1038&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1038&#39;)">
                         <strong>LOB1038 -  Fisica Experimental I</strong>
                         <div id="requisitos-LOB1038" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -108,7 +108,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1045" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1045')" onmouseover="mostrarRequisitos('LOB1045')" onmouseout="ocultarRequisitos('LOB1045')">
+                    <li id="disciplina-LOB1045" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1045&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1045&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1045&#39;)">
                         <strong>LOB1045 -  Leitura e Producao de Textos Academicos</strong>
                         <div id="requisitos-LOB1045" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -119,7 +119,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4010" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4010')" onmouseover="mostrarRequisitos('LOQ4010')" onmouseout="ocultarRequisitos('LOQ4010')">
+                    <li id="disciplina-LOQ4010" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4010&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4010&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4010&#39;)">
                         <strong>LOQ4010 -  Introducao a  Engenharia  Quimica</strong>
                         <div id="requisitos-LOQ4010" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -130,7 +130,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4097" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4097')" onmouseover="mostrarRequisitos('LOQ4097')" onmouseout="ocultarRequisitos('LOQ4097')">
+                    <li id="disciplina-LOQ4097" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4097&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4097&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4097&#39;)">
                         <strong>LOQ4097 -  Fundamentos de Quimica para Engenharia I-A</strong>
                         <div id="requisitos-LOQ4097" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -152,7 +152,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1004" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1004')" onmouseover="mostrarRequisitos('LOB1004')" onmouseout="ocultarRequisitos('LOB1004')">
+                    <li id="disciplina-LOB1004" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1004&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1004&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1004&#39;)">
                         <strong>LOB1004 -  Calculo II</strong>
                         <div id="requisitos-LOB1004" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -173,7 +173,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1019" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1019')" onmouseover="mostrarRequisitos('LOB1019')" onmouseout="ocultarRequisitos('LOB1019')">
+                    <li id="disciplina-LOB1019" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1019&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1019&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1019&#39;)">
                         <strong>LOB1019 -  Fisica II</strong>
                         <div id="requisitos-LOB1019" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -194,7 +194,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1037" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1037')" onmouseover="mostrarRequisitos('LOB1037')" onmouseout="ocultarRequisitos('LOB1037')">
+                    <li id="disciplina-LOB1037" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1037&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1037&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1037&#39;)">
                         <strong>LOB1037 -  Algebra Linear</strong>
                         <div id="requisitos-LOB1037" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -210,7 +210,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOM3016" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3016')" onmouseover="mostrarRequisitos('LOM3016')" onmouseout="ocultarRequisitos('LOM3016')">
+                    <li id="disciplina-LOM3016" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOM3016&#39;)" onmouseover="mostrarRequisitos(&#39;LOM3016&#39;)" onmouseout="ocultarRequisitos(&#39;LOM3016&#39;)">
                         <strong>LOM3016 -  Introducao a  Ciencia dos Materiais</strong>
                         <div id="requisitos-LOM3016" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -221,7 +221,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4053" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4053')" onmouseover="mostrarRequisitos('LOQ4053')" onmouseout="ocultarRequisitos('LOQ4053')">
+                    <li id="disciplina-LOQ4053" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4053&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4053&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4053&#39;)">
                         <strong>LOQ4053 -  Balancos de Massa e Energia</strong>
                         <div id="requisitos-LOQ4053" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -232,7 +232,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4095" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4095')" onmouseover="mostrarRequisitos('LOQ4095')" onmouseout="ocultarRequisitos('LOQ4095')">
+                    <li id="disciplina-LOQ4095" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4095&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4095&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4095&#39;)">
                         <strong>LOQ4095 -  Quimica Geral Experimental</strong>
                         <div id="requisitos-LOQ4095" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -248,7 +248,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4098" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4098')" onmouseover="mostrarRequisitos('LOQ4098')" onmouseout="ocultarRequisitos('LOQ4098')">
+                    <li id="disciplina-LOQ4098" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4098&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4098&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4098&#39;)">
                         <strong>LOQ4098 -  Fundamentos de Quimica para Engenharia II-A</strong>
                         <div id="requisitos-LOQ4098" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -270,7 +270,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1012" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1012')" onmouseover="mostrarRequisitos('LOB1012')" onmouseout="ocultarRequisitos('LOB1012')">
+                    <li id="disciplina-LOB1012" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1012&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1012&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1012&#39;)">
                         <strong>LOB1012 -  Estatistica</strong>
                         <div id="requisitos-LOB1012" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -286,7 +286,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1024" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1024')" onmouseover="mostrarRequisitos('LOB1024')" onmouseout="ocultarRequisitos('LOB1024')">
+                    <li id="disciplina-LOB1024" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1024&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1024&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1024&#39;)">
                         <strong>LOB1024 -  Mecanica</strong>
                         <div id="requisitos-LOB1024" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -307,7 +307,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1039" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1039')" onmouseover="mostrarRequisitos('LOB1039')" onmouseout="ocultarRequisitos('LOB1039')">
+                    <li id="disciplina-LOB1039" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1039&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1039&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1039&#39;)">
                         <strong>LOB1039 -  Fisica Experimental III</strong>
                         <div id="requisitos-LOB1039" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -323,7 +323,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1052" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1052')" onmouseover="mostrarRequisitos('LOB1052')" onmouseout="ocultarRequisitos('LOB1052')">
+                    <li id="disciplina-LOB1052" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1052&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1052&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1052&#39;)">
                         <strong>LOB1052 -  Calculo III</strong>
                         <div id="requisitos-LOB1052" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -339,7 +339,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1053" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1053')" onmouseover="mostrarRequisitos('LOB1053')" onmouseout="ocultarRequisitos('LOB1053')">
+                    <li id="disciplina-LOB1053" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1053&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1053&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1053&#39;)">
                         <strong>LOB1053 -  Fisica III</strong>
                         <div id="requisitos-LOB1053" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -360,7 +360,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1056" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1056')" onmouseover="mostrarRequisitos('LOB1056')" onmouseout="ocultarRequisitos('LOB1056')">
+                    <li id="disciplina-LOB1056" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1056&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1056&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1056&#39;)">
                         <strong>LOB1056 -  Introducao aos Metodos Numericos e Computacionais</strong>
                         <div id="requisitos-LOB1056" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -381,7 +381,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4037" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4037')" onmouseover="mostrarRequisitos('LOQ4037')" onmouseout="ocultarRequisitos('LOQ4037')">
+                    <li id="disciplina-LOQ4037" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4037&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4037&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4037&#39;)">
                         <strong>LOQ4037 -  Quimica Organica I</strong>
                         <div id="requisitos-LOQ4037" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -402,7 +402,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4055" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4055')" onmouseover="mostrarRequisitos('LOQ4055')" onmouseout="ocultarRequisitos('LOQ4055')">
+                    <li id="disciplina-LOQ4055" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4055&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4055&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4055&#39;)">
                         <strong>LOQ4055 -  Quimica Inorganica</strong>
                         <div id="requisitos-LOQ4055" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -429,7 +429,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1006" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1006')" onmouseover="mostrarRequisitos('LOB1006')" onmouseout="ocultarRequisitos('LOB1006')">
+                    <li id="disciplina-LOB1006" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1006&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1006&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1006&#39;)">
                         <strong>LOB1006 -  Calculo IV</strong>
                         <div id="requisitos-LOB1006" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -450,7 +450,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1011" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1011')" onmouseover="mostrarRequisitos('LOB1011')" onmouseout="ocultarRequisitos('LOB1011')">
+                    <li id="disciplina-LOB1011" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1011&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1011&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1011&#39;)">
                         <strong>LOB1011 -  Eletricidade Aplicada</strong>
                         <div id="requisitos-LOB1011" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -466,7 +466,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1040" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1040')" onmouseover="mostrarRequisitos('LOB1040')" onmouseout="ocultarRequisitos('LOB1040')">
+                    <li id="disciplina-LOB1040" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1040&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1040&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1040&#39;)">
                         <strong>LOB1040 -  Laboratorio de Eletricidade</strong>
                         <div id="requisitos-LOB1040" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -482,7 +482,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1055" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1055')" onmouseover="mostrarRequisitos('LOB1055')" onmouseout="ocultarRequisitos('LOB1055')">
+                    <li id="disciplina-LOB1055" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1055&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1055&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1055&#39;)">
                         <strong>LOB1055 -  Fundamentos de Engenharia de Seguranca no Trabalho</strong>
                         <div id="requisitos-LOB1055" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -493,7 +493,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOM3081" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3081')" onmouseover="mostrarRequisitos('LOM3081')" onmouseout="ocultarRequisitos('LOM3081')">
+                    <li id="disciplina-LOM3081" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOM3081&#39;)" onmouseover="mostrarRequisitos(&#39;LOM3081&#39;)" onmouseout="ocultarRequisitos(&#39;LOM3081&#39;)">
                         <strong>LOM3081 -  Introducao a Mecanica dos Solidos</strong>
                         <div id="requisitos-LOM3081" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -509,7 +509,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4038" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4038')" onmouseover="mostrarRequisitos('LOQ4038')" onmouseout="ocultarRequisitos('LOQ4038')">
+                    <li id="disciplina-LOQ4038" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4038&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4038&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4038&#39;)">
                         <strong>LOQ4038 -  Quimica Organica II</strong>
                         <div id="requisitos-LOQ4038" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -525,7 +525,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4082" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4082')" onmouseover="mostrarRequisitos('LOQ4082')" onmouseout="ocultarRequisitos('LOQ4082')">
+                    <li id="disciplina-LOQ4082" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4082&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4082&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4082&#39;)">
                         <strong>LOQ4082 -  Corrosao</strong>
                         <div id="requisitos-LOQ4082" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -546,7 +546,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4083" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4083')" onmouseover="mostrarRequisitos('LOQ4083')" onmouseout="ocultarRequisitos('LOQ4083')">
+                    <li id="disciplina-LOQ4083" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4083&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4083&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4083&#39;)">
                         <strong>LOQ4083 -  Fenomenos de Transporte I</strong>
                         <div id="requisitos-LOQ4083" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -567,7 +567,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4087" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4087')" onmouseover="mostrarRequisitos('LOQ4087')" onmouseout="ocultarRequisitos('LOQ4087')">
+                    <li id="disciplina-LOQ4087" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4087&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4087&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4087&#39;)">
                         <strong>LOQ4087 -  Termodinamica Quimica Aplicada I</strong>
                         <div id="requisitos-LOQ4087" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -604,7 +604,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOQ4009" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4009')" onmouseover="mostrarRequisitos('LOQ4009')" onmouseout="ocultarRequisitos('LOQ4009')">
+                    <li id="disciplina-LOQ4009" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4009&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4009&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4009&#39;)">
                         <strong>LOQ4009 -  Instrumentacao na Industria Quimica</strong>
                         <div id="requisitos-LOQ4009" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -625,7 +625,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4056" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4056')" onmouseover="mostrarRequisitos('LOQ4056')" onmouseout="ocultarRequisitos('LOQ4056')">
+                    <li id="disciplina-LOQ4056" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4056&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4056&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4056&#39;)">
                         <strong>LOQ4056 -  Quimica Analitica para Engenharia</strong>
                         <div id="requisitos-LOQ4056" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -651,7 +651,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4060" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4060')" onmouseover="mostrarRequisitos('LOQ4060')" onmouseout="ocultarRequisitos('LOQ4060')">
+                    <li id="disciplina-LOQ4060" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4060&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4060&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4060&#39;)">
                         <strong>LOQ4060 -  Laboratorio de Engenharia Quimica I</strong>
                         <div id="requisitos-LOQ4060" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -667,7 +667,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4084" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4084')" onmouseover="mostrarRequisitos('LOQ4084')" onmouseout="ocultarRequisitos('LOQ4084')">
+                    <li id="disciplina-LOQ4084" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4084&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4084&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4084&#39;)">
                         <strong>LOQ4084 -  Fenomenos de Transporte II</strong>
                         <div id="requisitos-LOQ4084" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -693,7 +693,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4085" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4085')" onmouseover="mostrarRequisitos('LOQ4085')" onmouseout="ocultarRequisitos('LOQ4085')">
+                    <li id="disciplina-LOQ4085" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4085&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4085&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4085&#39;)">
                         <strong>LOQ4085 -  Operacoes Unitarias I</strong>
                         <div id="requisitos-LOQ4085" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -709,7 +709,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4088" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4088')" onmouseover="mostrarRequisitos('LOQ4088')" onmouseout="ocultarRequisitos('LOQ4088')">
+                    <li id="disciplina-LOQ4088" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4088&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4088&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4088&#39;)">
                         <strong>LOQ4088 -  Termodinamica Quimica Aplicada II</strong>
                         <div id="requisitos-LOQ4088" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -725,7 +725,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4234" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4234')" onmouseover="mostrarRequisitos('LOQ4234')" onmouseout="ocultarRequisitos('LOQ4234')">
+                    <li id="disciplina-LOQ4234" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4234&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4234&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4234&#39;)">
                         <strong>LOQ4234 -  Empreendedorismo e Inovacao</strong>
                         <div id="requisitos-LOQ4234" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -747,7 +747,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOQ4001" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4001')" onmouseover="mostrarRequisitos('LOQ4001')" onmouseout="ocultarRequisitos('LOQ4001')">
+                    <li id="disciplina-LOQ4001" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4001&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4001&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4001&#39;)">
                         <strong>LOQ4001 -  Analise Instrumental</strong>
                         <div id="requisitos-LOQ4001" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -763,7 +763,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4003" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4003')" onmouseover="mostrarRequisitos('LOQ4003')" onmouseout="ocultarRequisitos('LOQ4003')">
+                    <li id="disciplina-LOQ4003" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4003&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4003&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4003&#39;)">
                         <strong>LOQ4003 -  Cinetica Quimica Aplicada</strong>
                         <div id="requisitos-LOQ4003" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -779,7 +779,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4004" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4004')" onmouseover="mostrarRequisitos('LOQ4004')" onmouseout="ocultarRequisitos('LOQ4004')">
+                    <li id="disciplina-LOQ4004" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4004&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4004&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4004&#39;)">
                         <strong>LOQ4004 -  Controle de Processos Quimicos</strong>
                         <div id="requisitos-LOQ4004" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -805,7 +805,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4054" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4054')" onmouseover="mostrarRequisitos('LOQ4054')" onmouseout="ocultarRequisitos('LOQ4054')">
+                    <li id="disciplina-LOQ4054" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4054&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4054&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4054&#39;)">
                         <strong>LOQ4054 -  Fenomenos de Transporte III</strong>
                         <div id="requisitos-LOQ4054" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -821,7 +821,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4061" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4061')" onmouseover="mostrarRequisitos('LOQ4061')" onmouseout="ocultarRequisitos('LOQ4061')">
+                    <li id="disciplina-LOQ4061" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4061&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4061&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4061&#39;)">
                         <strong>LOQ4061 -  Laboratorio de Engenharia Quimica II</strong>
                         <div id="requisitos-LOQ4061" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -842,7 +842,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4086" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4086')" onmouseover="mostrarRequisitos('LOQ4086')" onmouseout="ocultarRequisitos('LOQ4086')">
+                    <li id="disciplina-LOQ4086" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4086&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4086&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4086&#39;)">
                         <strong>LOQ4086 -  Operacoes Unitarias II</strong>
                         <div id="requisitos-LOQ4086" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -858,7 +858,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOT2004" class="list-group-item disciplina-item" onclick="toggleSelecao('LOT2004')" onmouseover="mostrarRequisitos('LOT2004')" onmouseout="ocultarRequisitos('LOT2004')">
+                    <li id="disciplina-LOT2004" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOT2004&#39;)" onmouseover="mostrarRequisitos(&#39;LOT2004&#39;)" onmouseout="ocultarRequisitos(&#39;LOT2004&#39;)">
                         <strong>LOT2004 -  Bioquimica</strong>
                         <div id="requisitos-LOT2004" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -885,7 +885,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1046" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1046')" onmouseover="mostrarRequisitos('LOB1046')" onmouseout="ocultarRequisitos('LOB1046')">
+                    <li id="disciplina-LOB1046" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1046&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1046&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1046&#39;)">
                         <strong>LOB1046 -  Engenharia do Meio Ambiente</strong>
                         <div id="requisitos-LOB1046" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -901,7 +901,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOM3022" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3022')" onmouseover="mostrarRequisitos('LOM3022')" onmouseout="ocultarRequisitos('LOM3022')">
+                    <li id="disciplina-LOM3022" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOM3022&#39;)" onmouseover="mostrarRequisitos(&#39;LOM3022&#39;)" onmouseout="ocultarRequisitos(&#39;LOM3022&#39;)">
                         <strong>LOM3022 -  Materiais para a  Industria Quimica</strong>
                         <div id="requisitos-LOM3022" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -922,7 +922,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4002" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4002')" onmouseover="mostrarRequisitos('LOQ4002')" onmouseout="ocultarRequisitos('LOQ4002')">
+                    <li id="disciplina-LOQ4002" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4002&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4002&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4002&#39;)">
                         <strong>LOQ4002 -  Reatores Quimicos</strong>
                         <div id="requisitos-LOQ4002" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -938,7 +938,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4057" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4057')" onmouseover="mostrarRequisitos('LOQ4057')" onmouseout="ocultarRequisitos('LOQ4057')">
+                    <li id="disciplina-LOQ4057" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4057&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4057&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4057&#39;)">
                         <strong>LOQ4057 -  Operacoes Unitarias III</strong>
                         <div id="requisitos-LOQ4057" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -954,7 +954,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4062" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4062')" onmouseover="mostrarRequisitos('LOQ4062')" onmouseout="ocultarRequisitos('LOQ4062')">
+                    <li id="disciplina-LOQ4062" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4062&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4062&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4062&#39;)">
                         <strong>LOQ4062 -  Laboratorio de Engenharia Quimica III</strong>
                         <div id="requisitos-LOQ4062" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -975,7 +975,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4064" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4064')" onmouseover="mostrarRequisitos('LOQ4064')" onmouseout="ocultarRequisitos('LOQ4064')">
+                    <li id="disciplina-LOQ4064" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4064&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4064&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4064&#39;)">
                         <strong>LOQ4064 -  Engenharia de Processos Quimicos I</strong>
                         <div id="requisitos-LOQ4064" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -996,7 +996,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4209" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4209')" onmouseover="mostrarRequisitos('LOQ4209')" onmouseout="ocultarRequisitos('LOQ4209')">
+                    <li id="disciplina-LOQ4209" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4209&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4209&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4209&#39;)">
                         <strong>LOQ4209 -  Engenharia da Qualidade</strong>
                         <div id="requisitos-LOQ4209" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1012,7 +1012,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4233" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4233')" onmouseover="mostrarRequisitos('LOQ4233')" onmouseout="ocultarRequisitos('LOQ4233')">
+                    <li id="disciplina-LOQ4233" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4233&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4233&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4233&#39;)">
                         <strong>LOQ4233 -  Gestao de Negocios</strong>
                         <div id="requisitos-LOQ4233" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1034,7 +1034,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1010" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1010')" onmouseover="mostrarRequisitos('LOB1010')" onmouseout="ocultarRequisitos('LOB1010')">
+                    <li id="disciplina-LOB1010" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1010&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1010&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1010&#39;)">
                         <strong>LOB1010 -  Direito  Aplicado a Engenharia</strong>
                         <div id="requisitos-LOB1010" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1045,7 +1045,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4022" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4022')" onmouseover="mostrarRequisitos('LOQ4022')" onmouseout="ocultarRequisitos('LOQ4022')">
+                    <li id="disciplina-LOQ4022" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4022&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4022&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4022&#39;)">
                         <strong>LOQ4022 -  Processos Quimicos Industriais I</strong>
                         <div id="requisitos-LOQ4022" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1066,7 +1066,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4059" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4059')" onmouseover="mostrarRequisitos('LOQ4059')" onmouseout="ocultarRequisitos('LOQ4059')">
+                    <li id="disciplina-LOQ4059" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4059&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4059&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4059&#39;)">
                         <strong>LOQ4059 -  Polimeros</strong>
                         <div id="requisitos-LOQ4059" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1082,7 +1082,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4063" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4063')" onmouseover="mostrarRequisitos('LOQ4063')" onmouseout="ocultarRequisitos('LOQ4063')">
+                    <li id="disciplina-LOQ4063" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4063&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4063&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4063&#39;)">
                         <strong>LOQ4063 -  Laboratorio de Engenharia Quimica IV</strong>
                         <div id="requisitos-LOQ4063" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1103,7 +1103,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4065" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4065')" onmouseover="mostrarRequisitos('LOQ4065')" onmouseout="ocultarRequisitos('LOQ4065')">
+                    <li id="disciplina-LOQ4065" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4065&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4065&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4065&#39;)">
                         <strong>LOQ4065 -  Engenharia de Processos Quimicos II</strong>
                         <div id="requisitos-LOQ4065" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1119,7 +1119,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4078" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4078')" onmouseover="mostrarRequisitos('LOQ4078')" onmouseout="ocultarRequisitos('LOQ4078')">
+                    <li id="disciplina-LOQ4078" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4078&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4078&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4078&#39;)">
                         <strong>LOQ4078 -  Modelagem e Simulacao de Processos</strong>
                         <div id="requisitos-LOQ4078" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1145,7 +1145,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOT2041" class="list-group-item disciplina-item" onclick="toggleSelecao('LOT2041')" onmouseover="mostrarRequisitos('LOT2041')" onmouseout="ocultarRequisitos('LOT2041')">
+                    <li id="disciplina-LOT2041" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOT2041&#39;)" onmouseover="mostrarRequisitos(&#39;LOT2041&#39;)" onmouseout="ocultarRequisitos(&#39;LOT2041&#39;)">
                         <strong>LOT2041 -  Engenharia Bioquimica</strong>
                         <div id="requisitos-LOT2041" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1172,7 +1172,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1031" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1031')" onmouseover="mostrarRequisitos('LOB1031')" onmouseout="ocultarRequisitos('LOB1031')">
+                    <li id="disciplina-LOB1031" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1031&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1031&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1031&#39;)">
                         <strong>LOB1031 -  Psicologia Organizacional e do Trabalho</strong>
                         <div id="requisitos-LOB1031" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1183,7 +1183,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4023" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4023')" onmouseover="mostrarRequisitos('LOQ4023')" onmouseout="ocultarRequisitos('LOQ4023')">
+                    <li id="disciplina-LOQ4023" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4023&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4023&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4023&#39;)">
                         <strong>LOQ4023 -  Processos Quimicos Industriais II</strong>
                         <div id="requisitos-LOQ4023" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1204,7 +1204,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4047" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4047')" onmouseover="mostrarRequisitos('LOQ4047')" onmouseout="ocultarRequisitos('LOQ4047')">
+                    <li id="disciplina-LOQ4047" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4047&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4047&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4047&#39;)">
                         <strong>LOQ4047 -  Trabalho de Conclusao de Curso I</strong>
                         <div id="requisitos-LOQ4047" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1215,7 +1215,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4049" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4049')" onmouseover="mostrarRequisitos('LOQ4049')" onmouseout="ocultarRequisitos('LOQ4049')">
+                    <li id="disciplina-LOQ4049" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4049&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4049&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4049&#39;)">
                         <strong>LOQ4049 -  Projeto na Industria Quimica</strong>
                         <div id="requisitos-LOQ4049" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1236,7 +1236,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4050" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4050')" onmouseover="mostrarRequisitos('LOQ4050')" onmouseout="ocultarRequisitos('LOQ4050')">
+                    <li id="disciplina-LOQ4050" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4050&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4050&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4050&#39;)">
                         <strong>LOQ4050 -  Engenharia Economica</strong>
                         <div id="requisitos-LOQ4050" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1252,7 +1252,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4250" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4250')" onmouseover="mostrarRequisitos('LOQ4250')" onmouseout="ocultarRequisitos('LOQ4250')">
+                    <li id="disciplina-LOQ4250" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4250&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4250&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4250&#39;)">
                         <strong>LOQ4250 -  Fundamentos de Administracao da Producao</strong>
                         <div id="requisitos-LOQ4250" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1268,7 +1268,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOT2042" class="list-group-item disciplina-item" onclick="toggleSelecao('LOT2042')" onmouseover="mostrarRequisitos('LOT2042')" onmouseout="ocultarRequisitos('LOT2042')">
+                    <li id="disciplina-LOT2042" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOT2042&#39;)" onmouseover="mostrarRequisitos(&#39;LOT2042&#39;)" onmouseout="ocultarRequisitos(&#39;LOT2042&#39;)">
                         <strong>LOT2042 -  Processos Bioquimicos</strong>
                         <div id="requisitos-LOT2042" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1295,7 +1295,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOQ4048" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4048')" onmouseover="mostrarRequisitos('LOQ4048')" onmouseout="ocultarRequisitos('LOQ4048')">
+                    <li id="disciplina-LOQ4048" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4048&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4048&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4048&#39;)">
                         <strong>LOQ4048 -  Trabalho de  Conclusao do Curso II</strong>
                         <div id="requisitos-LOQ4048" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1311,7 +1311,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4051" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4051')" onmouseover="mostrarRequisitos('LOQ4051')" onmouseout="ocultarRequisitos('LOQ4051')">
+                    <li id="disciplina-LOQ4051" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4051&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4051&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4051&#39;)">
                         <strong>LOQ4051 -  Estagio Supervisionado</strong>
                         <div id="requisitos-LOQ4051" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1531,15 +1531,15 @@ window.addEventListener('resize', ajustarLayout);
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; /* Centraliza os cards de semestre dentro do container */
+    width: flex;
+    max-width: 100vw; /* Largura máxima do container igual à largura da viewport */
     margin: 0 auto; /* Centraliza o container na página */
 }
 
 /* Estilos para cada cartão de semestre */
 .semestre-card {
-    flex: 1 1 calc(50% - 20px); /* Cada card ocupa aproximadamente metade da largura disponível menos o espaço entre as colunas */
-    min-width: 250px;
-    max-width: 300px; /* Largura máxima opcional para evitar que os cards fiquem muito largos */
+    flex: 2 1 calc(20% - 5px); /* Cada card ocupa metade da largura disponível menos o espaço entre as colunas */
+    width: 200px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -1589,15 +1589,33 @@ footer {
 }
 
 /* Layout responsivo baseado na largura da viewport */
-@media (min-width: 992px) {
+.colunas-quatro {
+    justify-content: space-between;
+}
+
+.colunas-dois {
+    justify-content: space-between;
+}
+
+.colunas-um {
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .colunas-full {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
     .semestre-card {
-        flex: 1 1 calc(33.33% - 20px);
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 991px) {
     .semestre-card {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 100%;
     }
 }
 </style>
@@ -1605,11 +1623,11 @@ footer {
 
     </div>
     <footer class="text-center mt-4">
-        <p>&copy; Desenvolvido por Derick Mazelli Barbosa</p>
+        <p>© Desenvolvido por Derick Mazelli Barbosa</p>
     </footer>
     <!-- Bootstrap JS e jQuery (opcional, se necessário) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-7Hv3/Z85FPbYyNzPPjZOzmKJ32c1gOO6Z4NluzTf8qLXYlZ6Yp1k1IR8kXCSFm+x" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+JrUkPPSk/aJ7tmOGfrG/CJoA6E76Pcjz5H" crossorigin="anonymous"></script>
-</body>
-</html>
+    <script src="./EQD_files/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./EQD_files/popper.min.js" integrity="sha384-7Hv3/Z85FPbYyNzPPjZOzmKJ32c1gOO6Z4NluzTf8qLXYlZ6Yp1k1IR8kXCSFm+x" crossorigin="anonymous"></script>
+    <script src="./EQD_files/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+JrUkPPSk/aJ7tmOGfrG/CJoA6E76Pcjz5H" crossorigin="anonymous"></script>
+
+</body></html>

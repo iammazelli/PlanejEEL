@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0041)http://127.0.0.1:5000/curso?curso_nome=EA -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matriz Curricular - EA</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./EA_files/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Custom CSS -->
     <style>
         body {
             background-color: #f8f9fa;
-            padding: 10px;
+            padding: 20px;
         }
         .container {
-            max-width: calc(100% - 30px);
-            min-width: flex;
+            max-width: 2000px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             padding: 30px;
             margin-top: 20px;
-            margin: 0 auto; /* Margens automáticas para centralização */
+            width: auto; /* Largura automática */
+            margin: auto; /* Margens automáticas para centralização */
         }
         h1 {
             text-align: center;
@@ -43,7 +43,7 @@
         Selecione as disciplinas nas quais você foi reprovado. Disciplinas travadas serão destacadas em vermelho.
     </div>
 
-    <div class="semestres-container">
+    <div class="semestres-container colunas-full">
         
         <div class="card semestre-card m-3 shadow">
             <div class="card-header bg-primary text-white">
@@ -53,7 +53,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1003" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1003')" onmouseover="mostrarRequisitos('LOB1003')" onmouseout="ocultarRequisitos('LOB1003')">
+                    <li id="disciplina-LOB1003" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1003&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1003&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1003&#39;)">
                         <strong>LOB1003 -  Calculo I</strong>
                         <div id="requisitos-LOB1003" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -64,7 +64,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1036" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1036')" onmouseover="mostrarRequisitos('LOB1036')" onmouseout="ocultarRequisitos('LOB1036')">
+                    <li id="disciplina-LOB1036" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1036&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1036&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1036&#39;)">
                         <strong>LOB1036 -  Geometria Analitica</strong>
                         <div id="requisitos-LOB1036" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -75,7 +75,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1045" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1045')" onmouseover="mostrarRequisitos('LOB1045')" onmouseout="ocultarRequisitos('LOB1045')">
+                    <li id="disciplina-LOB1045" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1045&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1045&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1045&#39;)">
                         <strong>LOB1045 -  Leitura e Producao de Textos Academicos</strong>
                         <div id="requisitos-LOB1045" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -86,7 +86,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1201" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1201')" onmouseover="mostrarRequisitos('LOB1201')" onmouseout="ocultarRequisitos('LOB1201')">
+                    <li id="disciplina-LOB1201" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1201&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1201&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1201&#39;)">
                         <strong>LOB1201 -  Introducao a Engenharia Ambiental</strong>
                         <div id="requisitos-LOB1201" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -97,7 +97,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1205" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1205')" onmouseover="mostrarRequisitos('LOB1205')" onmouseout="ocultarRequisitos('LOB1205')">
+                    <li id="disciplina-LOB1205" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1205&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1205&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1205&#39;)">
                         <strong>LOB1205 -  Ecologia Basica</strong>
                         <div id="requisitos-LOB1205" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -108,7 +108,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1254" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1254')" onmouseover="mostrarRequisitos('LOB1254')" onmouseout="ocultarRequisitos('LOB1254')">
+                    <li id="disciplina-LOB1254" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1254&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1254&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1254&#39;)">
                         <strong>LOB1254 -  Geologia</strong>
                         <div id="requisitos-LOB1254" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -119,7 +119,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4097" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4097')" onmouseover="mostrarRequisitos('LOQ4097')" onmouseout="ocultarRequisitos('LOQ4097')">
+                    <li id="disciplina-LOQ4097" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4097&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4097&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4097&#39;)">
                         <strong>LOQ4097 -  Fundamentos de Quimica para Engenharia I-A</strong>
                         <div id="requisitos-LOQ4097" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -130,7 +130,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4247" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4247')" onmouseover="mostrarRequisitos('LOQ4247')" onmouseout="ocultarRequisitos('LOQ4247')">
+                    <li id="disciplina-LOQ4247" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4247&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4247&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4247&#39;)">
                         <strong>LOQ4247 -  Desenho Assistido por Computador</strong>
                         <div id="requisitos-LOQ4247" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -141,7 +141,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOT2045" class="list-group-item disciplina-item" onclick="toggleSelecao('LOT2045')" onmouseover="mostrarRequisitos('LOT2045')" onmouseout="ocultarRequisitos('LOT2045')">
+                    <li id="disciplina-LOT2045" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOT2045&#39;)" onmouseover="mostrarRequisitos(&#39;LOT2045&#39;)" onmouseout="ocultarRequisitos(&#39;LOT2045&#39;)">
                         <strong>LOT2045 -  Biologia</strong>
                         <div id="requisitos-LOT2045" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -163,7 +163,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1004" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1004')" onmouseover="mostrarRequisitos('LOB1004')" onmouseout="ocultarRequisitos('LOB1004')">
+                    <li id="disciplina-LOB1004" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1004&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1004&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1004&#39;)">
                         <strong>LOB1004 -  Calculo II</strong>
                         <div id="requisitos-LOB1004" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -184,7 +184,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1018" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1018')" onmouseover="mostrarRequisitos('LOB1018')" onmouseout="ocultarRequisitos('LOB1018')">
+                    <li id="disciplina-LOB1018" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1018&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1018&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1018&#39;)">
                         <strong>LOB1018 -  Fisica I</strong>
                         <div id="requisitos-LOB1018" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -195,7 +195,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1037" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1037')" onmouseover="mostrarRequisitos('LOB1037')" onmouseout="ocultarRequisitos('LOB1037')">
+                    <li id="disciplina-LOB1037" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1037&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1037&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1037&#39;)">
                         <strong>LOB1037 -  Algebra Linear</strong>
                         <div id="requisitos-LOB1037" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -211,7 +211,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1038" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1038')" onmouseover="mostrarRequisitos('LOB1038')" onmouseout="ocultarRequisitos('LOB1038')">
+                    <li id="disciplina-LOB1038" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1038&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1038&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1038&#39;)">
                         <strong>LOB1038 -  Fisica Experimental I</strong>
                         <div id="requisitos-LOB1038" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -222,7 +222,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1206" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1206')" onmouseover="mostrarRequisitos('LOB1206')" onmouseout="ocultarRequisitos('LOB1206')">
+                    <li id="disciplina-LOB1206" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1206&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1206&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1206&#39;)">
                         <strong>LOB1206 -  Solos I</strong>
                         <div id="requisitos-LOB1206" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -233,7 +233,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4095" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4095')" onmouseover="mostrarRequisitos('LOQ4095')" onmouseout="ocultarRequisitos('LOQ4095')">
+                    <li id="disciplina-LOQ4095" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4095&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4095&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4095&#39;)">
                         <strong>LOQ4095 -  Quimica Geral Experimental</strong>
                         <div id="requisitos-LOQ4095" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -249,7 +249,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4098" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4098')" onmouseover="mostrarRequisitos('LOQ4098')" onmouseout="ocultarRequisitos('LOQ4098')">
+                    <li id="disciplina-LOQ4098" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4098&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4098&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4098&#39;)">
                         <strong>LOQ4098 -  Fundamentos de Quimica para Engenharia II-A</strong>
                         <div id="requisitos-LOQ4098" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -265,7 +265,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4234" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4234')" onmouseover="mostrarRequisitos('LOQ4234')" onmouseout="ocultarRequisitos('LOQ4234')">
+                    <li id="disciplina-LOQ4234" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4234&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4234&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4234&#39;)">
                         <strong>LOQ4234 -  Empreendedorismo e Inovacao</strong>
                         <div id="requisitos-LOQ4234" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -276,7 +276,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOT2046" class="list-group-item disciplina-item" onclick="toggleSelecao('LOT2046')" onmouseover="mostrarRequisitos('LOT2046')" onmouseout="ocultarRequisitos('LOT2046')">
+                    <li id="disciplina-LOT2046" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOT2046&#39;)" onmouseover="mostrarRequisitos(&#39;LOT2046&#39;)" onmouseout="ocultarRequisitos(&#39;LOT2046&#39;)">
                         <strong>LOT2046 -  Microbiologia e Bioquimica Aplicadas</strong>
                         <div id="requisitos-LOT2046" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -303,7 +303,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1019" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1019')" onmouseover="mostrarRequisitos('LOB1019')" onmouseout="ocultarRequisitos('LOB1019')">
+                    <li id="disciplina-LOB1019" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1019&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1019&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1019&#39;)">
                         <strong>LOB1019 -  Fisica II</strong>
                         <div id="requisitos-LOB1019" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -324,7 +324,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1024" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1024')" onmouseover="mostrarRequisitos('LOB1024')" onmouseout="ocultarRequisitos('LOB1024')">
+                    <li id="disciplina-LOB1024" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1024&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1024&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1024&#39;)">
                         <strong>LOB1024 -  Mecanica</strong>
                         <div id="requisitos-LOB1024" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -345,7 +345,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1041" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1041')" onmouseover="mostrarRequisitos('LOB1041')" onmouseout="ocultarRequisitos('LOB1041')">
+                    <li id="disciplina-LOB1041" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1041&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1041&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1041&#39;)">
                         <strong>LOB1041 -  Fisica Experimental II</strong>
                         <div id="requisitos-LOB1041" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -366,7 +366,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1052" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1052')" onmouseover="mostrarRequisitos('LOB1052')" onmouseout="ocultarRequisitos('LOB1052')">
+                    <li id="disciplina-LOB1052" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1052&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1052&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1052&#39;)">
                         <strong>LOB1052 -  Calculo III</strong>
                         <div id="requisitos-LOB1052" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -382,7 +382,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1056" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1056')" onmouseover="mostrarRequisitos('LOB1056')" onmouseout="ocultarRequisitos('LOB1056')">
+                    <li id="disciplina-LOB1056" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1056&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1056&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1056&#39;)">
                         <strong>LOB1056 -  Introducao aos Metodos Numericos e Computacionais</strong>
                         <div id="requisitos-LOB1056" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -403,7 +403,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1210" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1210')" onmouseover="mostrarRequisitos('LOB1210')" onmouseout="ocultarRequisitos('LOB1210')">
+                    <li id="disciplina-LOB1210" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1210&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1210&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1210&#39;)">
                         <strong>LOB1210 -  Solos II</strong>
                         <div id="requisitos-LOB1210" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -419,7 +419,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOM3016" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3016')" onmouseover="mostrarRequisitos('LOM3016')" onmouseout="ocultarRequisitos('LOM3016')">
+                    <li id="disciplina-LOM3016" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOM3016&#39;)" onmouseover="mostrarRequisitos(&#39;LOM3016&#39;)" onmouseout="ocultarRequisitos(&#39;LOM3016&#39;)">
                         <strong>LOM3016 -  Introducao a  Ciencia dos Materiais</strong>
                         <div id="requisitos-LOM3016" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -430,7 +430,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4053" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4053')" onmouseover="mostrarRequisitos('LOQ4053')" onmouseout="ocultarRequisitos('LOQ4053')">
+                    <li id="disciplina-LOQ4053" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4053&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4053&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4053&#39;)">
                         <strong>LOQ4053 -  Balancos de Massa e Energia</strong>
                         <div id="requisitos-LOQ4053" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -441,7 +441,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4081" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4081')" onmouseover="mostrarRequisitos('LOQ4081')" onmouseout="ocultarRequisitos('LOQ4081')">
+                    <li id="disciplina-LOQ4081" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4081&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4081&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4081&#39;)">
                         <strong>LOQ4081 -  Quimica Organica</strong>
                         <div id="requisitos-LOQ4081" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -468,7 +468,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1006" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1006')" onmouseover="mostrarRequisitos('LOB1006')" onmouseout="ocultarRequisitos('LOB1006')">
+                    <li id="disciplina-LOB1006" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1006&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1006&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1006&#39;)">
                         <strong>LOB1006 -  Calculo IV</strong>
                         <div id="requisitos-LOB1006" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -489,7 +489,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1012" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1012')" onmouseover="mostrarRequisitos('LOB1012')" onmouseout="ocultarRequisitos('LOB1012')">
+                    <li id="disciplina-LOB1012" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1012&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1012&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1012&#39;)">
                         <strong>LOB1012 -  Estatistica</strong>
                         <div id="requisitos-LOB1012" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -505,7 +505,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1039" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1039')" onmouseover="mostrarRequisitos('LOB1039')" onmouseout="ocultarRequisitos('LOB1039')">
+                    <li id="disciplina-LOB1039" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1039&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1039&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1039&#39;)">
                         <strong>LOB1039 -  Fisica Experimental III</strong>
                         <div id="requisitos-LOB1039" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -521,7 +521,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1053" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1053')" onmouseover="mostrarRequisitos('LOB1053')" onmouseout="ocultarRequisitos('LOB1053')">
+                    <li id="disciplina-LOB1053" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1053&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1053&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1053&#39;)">
                         <strong>LOB1053 -  Fisica III</strong>
                         <div id="requisitos-LOB1053" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -542,7 +542,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1208" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1208')" onmouseover="mostrarRequisitos('LOB1208')" onmouseout="ocultarRequisitos('LOB1208')">
+                    <li id="disciplina-LOB1208" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1208&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1208&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1208&#39;)">
                         <strong>LOB1208 -  Quimica Analitica Ambiental I</strong>
                         <div id="requisitos-LOB1208" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -558,7 +558,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1264" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1264')" onmouseover="mostrarRequisitos('LOB1264')" onmouseout="ocultarRequisitos('LOB1264')">
+                    <li id="disciplina-LOB1264" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1264&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1264&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1264&#39;)">
                         <strong>LOB1264 -  Toxicologia Ambiental</strong>
                         <div id="requisitos-LOB1264" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -579,7 +579,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOM3081" class="list-group-item disciplina-item" onclick="toggleSelecao('LOM3081')" onmouseover="mostrarRequisitos('LOM3081')" onmouseout="ocultarRequisitos('LOM3081')">
+                    <li id="disciplina-LOM3081" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOM3081&#39;)" onmouseover="mostrarRequisitos(&#39;LOM3081&#39;)" onmouseout="ocultarRequisitos(&#39;LOM3081&#39;)">
                         <strong>LOM3081 -  Introducao a Mecanica dos Solidos</strong>
                         <div id="requisitos-LOM3081" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -595,7 +595,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4076" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4076')" onmouseover="mostrarRequisitos('LOQ4076')" onmouseout="ocultarRequisitos('LOQ4076')">
+                    <li id="disciplina-LOQ4076" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4076&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4076&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4076&#39;)">
                         <strong>LOQ4076 -  Termodinamica Aplicada</strong>
                         <div id="requisitos-LOQ4076" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -611,7 +611,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4083" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4083')" onmouseover="mostrarRequisitos('LOQ4083')" onmouseout="ocultarRequisitos('LOQ4083')">
+                    <li id="disciplina-LOQ4083" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4083&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4083&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4083&#39;)">
                         <strong>LOQ4083 -  Fenomenos de Transporte I</strong>
                         <div id="requisitos-LOQ4083" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -643,7 +643,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1011" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1011')" onmouseover="mostrarRequisitos('LOB1011')" onmouseout="ocultarRequisitos('LOB1011')">
+                    <li id="disciplina-LOB1011" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1011&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1011&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1011&#39;)">
                         <strong>LOB1011 -  Eletricidade Aplicada</strong>
                         <div id="requisitos-LOB1011" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -659,7 +659,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1021" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1021')" onmouseover="mostrarRequisitos('LOB1021')" onmouseout="ocultarRequisitos('LOB1021')">
+                    <li id="disciplina-LOB1021" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1021&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1021&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1021&#39;)">
                         <strong>LOB1021 -  Fisica IV</strong>
                         <div id="requisitos-LOB1021" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -680,7 +680,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1040" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1040')" onmouseover="mostrarRequisitos('LOB1040')" onmouseout="ocultarRequisitos('LOB1040')">
+                    <li id="disciplina-LOB1040" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1040&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1040&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1040&#39;)">
                         <strong>LOB1040 -  Laboratorio de Eletricidade</strong>
                         <div id="requisitos-LOB1040" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -696,7 +696,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1042" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1042')" onmouseover="mostrarRequisitos('LOB1042')" onmouseout="ocultarRequisitos('LOB1042')">
+                    <li id="disciplina-LOB1042" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1042&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1042&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1042&#39;)">
                         <strong>LOB1042 -  Fisica Experimental IV</strong>
                         <div id="requisitos-LOB1042" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -712,7 +712,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1212" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1212')" onmouseover="mostrarRequisitos('LOB1212')" onmouseout="ocultarRequisitos('LOB1212')">
+                    <li id="disciplina-LOB1212" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1212&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1212&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1212&#39;)">
                         <strong>LOB1212 -  Quimica Analitica Ambiental II</strong>
                         <div id="requisitos-LOB1212" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -728,7 +728,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1221" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1221')" onmouseover="mostrarRequisitos('LOB1221')" onmouseout="ocultarRequisitos('LOB1221')">
+                    <li id="disciplina-LOB1221" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1221&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1221&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1221&#39;)">
                         <strong>LOB1221 -  Legislacao Ambiental</strong>
                         <div id="requisitos-LOB1221" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -739,7 +739,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1256" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1256')" onmouseover="mostrarRequisitos('LOB1256')" onmouseout="ocultarRequisitos('LOB1256')">
+                    <li id="disciplina-LOB1256" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1256&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1256&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1256&#39;)">
                         <strong>LOB1256 -  Cartografia e Topografia Aplicadas a Estudos Ambientais</strong>
                         <div id="requisitos-LOB1256" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -750,7 +750,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4079" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4079')" onmouseover="mostrarRequisitos('LOQ4079')" onmouseout="ocultarRequisitos('LOQ4079')">
+                    <li id="disciplina-LOQ4079" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4079&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4079&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4079&#39;)">
                         <strong>LOQ4079 -  Cinetica Aplicada e Reatores</strong>
                         <div id="requisitos-LOQ4079" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -766,7 +766,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4084" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4084')" onmouseover="mostrarRequisitos('LOQ4084')" onmouseout="ocultarRequisitos('LOQ4084')">
+                    <li id="disciplina-LOQ4084" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4084&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4084&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4084&#39;)">
                         <strong>LOQ4084 -  Fenomenos de Transporte II</strong>
                         <div id="requisitos-LOQ4084" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -792,7 +792,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4231" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4231')" onmouseover="mostrarRequisitos('LOQ4231')" onmouseout="ocultarRequisitos('LOQ4231')">
+                    <li id="disciplina-LOQ4231" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4231&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4231&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4231&#39;)">
                         <strong>LOQ4231 -  Introducao a Economia</strong>
                         <div id="requisitos-LOQ4231" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -803,7 +803,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4233" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4233')" onmouseover="mostrarRequisitos('LOQ4233')" onmouseout="ocultarRequisitos('LOQ4233')">
+                    <li id="disciplina-LOQ4233" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4233&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4233&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4233&#39;)">
                         <strong>LOQ4233 -  Gestao de Negocios</strong>
                         <div id="requisitos-LOQ4233" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -825,7 +825,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1202" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1202')" onmouseover="mostrarRequisitos('LOB1202')" onmouseout="ocultarRequisitos('LOB1202')">
+                    <li id="disciplina-LOB1202" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1202&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1202&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1202&#39;)">
                         <strong>LOB1202 -  Introducao ao Gerenciamento de Projetos Ambientais</strong>
                         <div id="requisitos-LOB1202" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -846,7 +846,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1213" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1213')" onmouseover="mostrarRequisitos('LOB1213')" onmouseout="ocultarRequisitos('LOB1213')">
+                    <li id="disciplina-LOB1213" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1213&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1213&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1213&#39;)">
                         <strong>LOB1213 -  Climatologia Aplicada</strong>
                         <div id="requisitos-LOB1213" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -857,7 +857,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1214" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1214')" onmouseover="mostrarRequisitos('LOB1214')" onmouseout="ocultarRequisitos('LOB1214')">
+                    <li id="disciplina-LOB1214" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1214&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1214&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1214&#39;)">
                         <strong>LOB1214 -  Sistemas de Informacoes Geograficas</strong>
                         <div id="requisitos-LOB1214" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -873,7 +873,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1235" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1235')" onmouseover="mostrarRequisitos('LOB1235')" onmouseout="ocultarRequisitos('LOB1235')">
+                    <li id="disciplina-LOB1235" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1235&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1235&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1235&#39;)">
                         <strong>LOB1235 -  Avaliacao de Impactos Ambientais</strong>
                         <div id="requisitos-LOB1235" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -889,7 +889,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1258" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1258')" onmouseover="mostrarRequisitos('LOB1258')" onmouseout="ocultarRequisitos('LOB1258')">
+                    <li id="disciplina-LOB1258" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1258&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1258&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1258&#39;)">
                         <strong>LOB1258 -  Hidraulica Aplicada</strong>
                         <div id="requisitos-LOB1258" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -905,7 +905,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1265" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1265')" onmouseover="mostrarRequisitos('LOB1265')" onmouseout="ocultarRequisitos('LOB1265')">
+                    <li id="disciplina-LOB1265" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1265&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1265&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1265&#39;)">
                         <strong>LOB1265 -  Epidemiologia Ambiental</strong>
                         <div id="requisitos-LOB1265" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -921,7 +921,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOQ4001" class="list-group-item disciplina-item" onclick="toggleSelecao('LOQ4001')" onmouseover="mostrarRequisitos('LOQ4001')" onmouseout="ocultarRequisitos('LOQ4001')">
+                    <li id="disciplina-LOQ4001" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOQ4001&#39;)" onmouseover="mostrarRequisitos(&#39;LOQ4001&#39;)" onmouseout="ocultarRequisitos(&#39;LOQ4001&#39;)">
                         <strong>LOQ4001 -  Analise Instrumental</strong>
                         <div id="requisitos-LOQ4001" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -948,7 +948,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1211" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1211')" onmouseover="mostrarRequisitos('LOB1211')" onmouseout="ocultarRequisitos('LOB1211')">
+                    <li id="disciplina-LOB1211" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1211&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1211&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1211&#39;)">
                         <strong>LOB1211 -  Poluicao Atmosferica</strong>
                         <div id="requisitos-LOB1211" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -959,7 +959,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1215" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1215')" onmouseover="mostrarRequisitos('LOB1215')" onmouseout="ocultarRequisitos('LOB1215')">
+                    <li id="disciplina-LOB1215" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1215&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1215&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1215&#39;)">
                         <strong>LOB1215 -  Recursos Energeticos</strong>
                         <div id="requisitos-LOB1215" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -975,7 +975,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1217" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1217')" onmouseover="mostrarRequisitos('LOB1217')" onmouseout="ocultarRequisitos('LOB1217')">
+                    <li id="disciplina-LOB1217" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1217&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1217&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1217&#39;)">
                         <strong>LOB1217 -  Operacoes Unitarias e Processos</strong>
                         <div id="requisitos-LOB1217" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -996,7 +996,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1226" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1226')" onmouseover="mostrarRequisitos('LOB1226')" onmouseout="ocultarRequisitos('LOB1226')">
+                    <li id="disciplina-LOB1226" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1226&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1226&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1226&#39;)">
                         <strong>LOB1226 -  Recuperacao de Areas Degradadas</strong>
                         <div id="requisitos-LOB1226" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1012,7 +1012,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1232" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1232')" onmouseover="mostrarRequisitos('LOB1232')" onmouseout="ocultarRequisitos('LOB1232')">
+                    <li id="disciplina-LOB1232" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1232&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1232&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1232&#39;)">
                         <strong>LOB1232 -  Licenciamento Ambiental</strong>
                         <div id="requisitos-LOB1232" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1028,7 +1028,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1240" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1240')" onmouseover="mostrarRequisitos('LOB1240')" onmouseout="ocultarRequisitos('LOB1240')">
+                    <li id="disciplina-LOB1240" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1240&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1240&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1240&#39;)">
                         <strong>LOB1240 -  Geotecnia Ambiental</strong>
                         <div id="requisitos-LOB1240" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1060,7 +1060,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1008" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1008')" onmouseover="mostrarRequisitos('LOB1008')" onmouseout="ocultarRequisitos('LOB1008')">
+                    <li id="disciplina-LOB1008" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1008&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1008&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1008&#39;)">
                         <strong>LOB1008 -  Ciencia, Tecnologia e Sociedade</strong>
                         <div id="requisitos-LOB1008" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1071,7 +1071,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1057" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1057')" onmouseover="mostrarRequisitos('LOB1057')" onmouseout="ocultarRequisitos('LOB1057')">
+                    <li id="disciplina-LOB1057" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1057&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1057&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1057&#39;)">
                         <strong>LOB1057 -  Engenharia de Fatores Humanos</strong>
                         <div id="requisitos-LOB1057" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1082,7 +1082,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1209" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1209')" onmouseover="mostrarRequisitos('LOB1209')" onmouseout="ocultarRequisitos('LOB1209')">
+                    <li id="disciplina-LOB1209" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1209&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1209&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1209&#39;)">
                         <strong>LOB1209 -  Gestao de Residuos Solidos</strong>
                         <div id="requisitos-LOB1209" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1103,7 +1103,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1228" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1228')" onmouseover="mostrarRequisitos('LOB1228')" onmouseout="ocultarRequisitos('LOB1228')">
+                    <li id="disciplina-LOB1228" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1228&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1228&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1228&#39;)">
                         <strong>LOB1228 -  Gestao Ambiental na Empresa</strong>
                         <div id="requisitos-LOB1228" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1114,7 +1114,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1255" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1255')" onmouseover="mostrarRequisitos('LOB1255')" onmouseout="ocultarRequisitos('LOB1255')">
+                    <li id="disciplina-LOB1255" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1255&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1255&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1255&#39;)">
                         <strong>LOB1255 -  Hidrologia Aplicada</strong>
                         <div id="requisitos-LOB1255" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1125,7 +1125,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1257" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1257')" onmouseover="mostrarRequisitos('LOB1257')" onmouseout="ocultarRequisitos('LOB1257')">
+                    <li id="disciplina-LOB1257" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1257&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1257&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1257&#39;)">
                         <strong>LOB1257 -  Sistema de Abastecimento e Tratamento de Agua</strong>
                         <div id="requisitos-LOB1257" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1146,7 +1146,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOT2035" class="list-group-item disciplina-item" onclick="toggleSelecao('LOT2035')" onmouseover="mostrarRequisitos('LOT2035')" onmouseout="ocultarRequisitos('LOT2035')">
+                    <li id="disciplina-LOT2035" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOT2035&#39;)" onmouseover="mostrarRequisitos(&#39;LOT2035&#39;)" onmouseout="ocultarRequisitos(&#39;LOT2035&#39;)">
                         <strong>LOT2035 -  Tratamento Biologico de Efluentes</strong>
                         <div id="requisitos-LOT2035" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1173,7 +1173,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1218" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1218')" onmouseover="mostrarRequisitos('LOB1218')" onmouseout="ocultarRequisitos('LOB1218')">
+                    <li id="disciplina-LOB1218" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1218&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1218&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1218&#39;)">
                         <strong>LOB1218 -  Recursos Hidricos</strong>
                         <div id="requisitos-LOB1218" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1184,7 +1184,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1223" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1223')" onmouseover="mostrarRequisitos('LOB1223')" onmouseout="ocultarRequisitos('LOB1223')">
+                    <li id="disciplina-LOB1223" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1223&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1223&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1223&#39;)">
                         <strong>LOB1223 -  Trabalho de Graduacao I</strong>
                         <div id="requisitos-LOB1223" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1335,7 +1335,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1224" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1224')" onmouseover="mostrarRequisitos('LOB1224')" onmouseout="ocultarRequisitos('LOB1224')">
+                    <li id="disciplina-LOB1224" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1224&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1224&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1224&#39;)">
                         <strong>LOB1224 -  Planejamento Ambiental e Urbanismo</strong>
                         <div id="requisitos-LOB1224" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1351,7 +1351,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1231" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1231')" onmouseover="mostrarRequisitos('LOB1231')" onmouseout="ocultarRequisitos('LOB1231')">
+                    <li id="disciplina-LOB1231" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1231&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1231&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1231&#39;)">
                         <strong>LOB1231 -  Modelagem Matematica Aplicada</strong>
                         <div id="requisitos-LOB1231" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1372,7 +1372,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1233" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1233')" onmouseover="mostrarRequisitos('LOB1233')" onmouseout="ocultarRequisitos('LOB1233')">
+                    <li id="disciplina-LOB1233" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1233&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1233&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1233&#39;)">
                         <strong>LOB1233 -  Caracterizacao de Bacias Hidrograficas</strong>
                         <div id="requisitos-LOB1233" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1404,7 +1404,7 @@
                 <ul class="list-group">
                     
                     
-                    <li id="disciplina-LOB1229" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1229')" onmouseover="mostrarRequisitos('LOB1229')" onmouseout="ocultarRequisitos('LOB1229')">
+                    <li id="disciplina-LOB1229" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1229&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1229&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1229&#39;)">
                         <strong>LOB1229 -  Trabalho de Graduacao II</strong>
                         <div id="requisitos-LOB1229" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1420,7 +1420,7 @@
                     </li>
                     
                     
-                    <li id="disciplina-LOB1237" class="list-group-item disciplina-item" onclick="toggleSelecao('LOB1237')" onmouseover="mostrarRequisitos('LOB1237')" onmouseout="ocultarRequisitos('LOB1237')">
+                    <li id="disciplina-LOB1237" class="list-group-item disciplina-item" onclick="toggleSelecao(&#39;LOB1237&#39;)" onmouseover="mostrarRequisitos(&#39;LOB1237&#39;)" onmouseout="ocultarRequisitos(&#39;LOB1237&#39;)">
                         <strong>LOB1237 -  Estagio Supervisionado em Engenharia Ambiental</strong>
                         <div id="requisitos-LOB1237" class="requisitos">
                             <strong>Requisitos:</strong>
@@ -1650,15 +1650,15 @@ window.addEventListener('resize', ajustarLayout);
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; /* Centraliza os cards de semestre dentro do container */
+    width: flex;
+    max-width: 100vw; /* Largura máxima do container igual à largura da viewport */
     margin: 0 auto; /* Centraliza o container na página */
 }
 
 /* Estilos para cada cartão de semestre */
 .semestre-card {
-    flex: 1 1 calc(50% - 20px); /* Cada card ocupa aproximadamente metade da largura disponível menos o espaço entre as colunas */
-    min-width: 250px;
-    max-width: 300px; /* Largura máxima opcional para evitar que os cards fiquem muito largos */
+    flex: 2 1 calc(20% - 5px); /* Cada card ocupa metade da largura disponível menos o espaço entre as colunas */
+    width: 200px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -1708,15 +1708,33 @@ footer {
 }
 
 /* Layout responsivo baseado na largura da viewport */
-@media (min-width: 992px) {
+.colunas-quatro {
+    justify-content: space-between;
+}
+
+.colunas-dois {
+    justify-content: space-between;
+}
+
+.colunas-um {
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .colunas-full {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
     .semestre-card {
-        flex: 1 1 calc(33.33% - 20px);
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 991px) {
     .semestre-card {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 100%;
     }
 }
 </style>
@@ -1724,11 +1742,11 @@ footer {
 
     </div>
     <footer class="text-center mt-4">
-        <p>&copy; Desenvolvido por Derick Mazelli Barbosa</p>
+        <p>© Desenvolvido por Derick Mazelli Barbosa</p>
     </footer>
     <!-- Bootstrap JS e jQuery (opcional, se necessário) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-7Hv3/Z85FPbYyNzPPjZOzmKJ32c1gOO6Z4NluzTf8qLXYlZ6Yp1k1IR8kXCSFm+x" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+JrUkPPSk/aJ7tmOGfrG/CJoA6E76Pcjz5H" crossorigin="anonymous"></script>
-</body>
-</html>
+    <script src="./EA_files/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./EA_files/popper.min.js" integrity="sha384-7Hv3/Z85FPbYyNzPPjZOzmKJ32c1gOO6Z4NluzTf8qLXYlZ6Yp1k1IR8kXCSFm+x" crossorigin="anonymous"></script>
+    <script src="./EA_files/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+JrUkPPSk/aJ7tmOGfrG/CJoA6E76Pcjz5H" crossorigin="anonymous"></script>
+
+</body></html>
