@@ -90,7 +90,7 @@ url_yaml = "https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/c
 @app.route('/')
 def index():
     cursos = carregar_cursos_do_yaml(url_yaml)
-    return render_template('index.html', cursos=cursos)
+    return render_template('templatespub/index.html', cursos=cursos)
 
 @app.route('/curso')
 def curso():

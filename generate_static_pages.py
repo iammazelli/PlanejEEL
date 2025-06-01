@@ -1,22 +1,76 @@
-import os
-from app import app, carregar_cursos_do_yaml, Curso
-from flask import render_template_string
+import os, requests, yaml, json
+from collections import defaultdict
+from flask import Flask, render_template_string
 
-# Caminho para o diretório onde serão geradas as páginas estáticas
-templatespub_dir = os.path.join(os.path.dirname(__file__), 'templatespub')
+#URLs para dados
+URL_YAML = "https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/cursos.yml"
+BASE_JSON_URL = "https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python"
 
-if not os.path.exists(templatespub_dir):
-    os.makedirs(templatespub_dir)
+TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "templates")
+TEMPLATESPUB_DIR = os.path.join(os.path.dirname(__file__), "templatespub")
 
-# Carregar cursos do YAML
-url_yaml = "https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/cursos.yml"
-cursos = carregar_cursos_do_yaml(url_yaml)
+app = Flask(__name__, template_folder=TEMPLATES_DIR)
+cursos = list()
 
-# Renderizar e salvar páginas estáticas para cada curso
-for curso in cursos:
-    with app.app_context():
-        curso_template = render_template_string(
-            """
+#função para baixar arquivos
+def _baixar(url):
+    print(f"[DEBUG]: baixando de {url}\n")
+    resp = requests.get(url, timeout = 10)
+    resp.raise_for_status()
+    return resp.text
+
+#função para pegar a lista de cursos
+def get_cursos(url_yaml):
+    print("[DEBUG]: coletando e montando lista de cursos\n")
+    cursos_yaml = yaml.safe_load(_baixar(url_yaml))
+    cursos_nome = list(cursos_yaml) if isinstance(cursos_yaml, dict) else list(cursos_yaml)
+    cursos_nome.sort()
+    print(f"[DEBUG]: cursos achados: {cursos_nome}\n")
+    return cursos_nome
+
+cursos_lista = get_cursos(URL_YAML)
+
+def cursos_json_url(cursos_lista):
+    cursos_url_json_lista = list()
+    print(f"[DEBUG]: montando a lista dos jsons dos cursos\n")
+    for curso in cursos_lista:
+        curso_json_url = f"{BASE_JSON_URL}/{curso}.json"
+        cursos_url_json_lista.append((curso, curso_json_url))  # Agora é uma tupla
+    return cursos_url_json_lista
+
+cursos_url_json_lista = cursos_json_url(cursos_lista)
+
+def get_json_file(curso_json_url):
+    print(f"[DEBUG]: baixando arquivos do json de {curso_json_url}\n")
+    curso_json = json.loads(_baixar(curso_json_url))
+    return curso_json
+
+def make_disciplina_dict(curso_json_file):
+    disciplinas = list()
+    for item in curso_json_file.items():
+        features = item[1] #dicionario
+        disciplina = {
+            "semestre" : features["semestre"],
+            "codigo" : features["sigla"],
+            "nome" : features["nomeascii"],
+            "docentes" : features["docentes"],
+            "requisitos" : features["requisitos"]
+        }
+        disciplinas.append(disciplina)
+    return disciplinas
+
+#print(make_disciplina_dict(get_json_file("https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/EA.json")))
+
+def agrupar_por_semestre(disciplinas: list[dict]) -> dict[int, list[dict]]:
+    semestres = defaultdict(list)
+    for d in disciplinas:
+        sem = int(d.get("semestre", 0))
+        semestres[sem].append(d)
+
+    for s, lst in sorted(semestres.items()):
+        return {s: sorted(lst, key=lambda x: x["codigo"])}
+
+TEMPLATE_STR = """
            {% extends "base.html" %}
 
 {% block title %}Matriz Curricular - {{ curso.nome }}{% endblock %}
@@ -235,13 +289,39 @@ footer {
 
 {% endblock %}
 
-            """,
-            curso=curso
-        )
+            """
 
-    with open(os.path.join(templatespub_dir, f"{curso.nome}.html"), 'w', encoding='utf-8') as f:
-        f.write(curso_template)
+def gerar_paginas(cursos_url_json_lista):
+    os.makedirs(TEMPLATESPUB_DIR, exist_ok=True)
 
-    print(f"Página estática gerada para {curso.nome}")
+    for sigla, url in cursos_url_json_lista:
+        dados_json = get_json_file(url)
+        disciplinas = make_disciplina_dict(dados_json)
+        por_semestre = agrupar_por_semestre(disciplinas)
 
-print("Processo de geração de páginas estáticas concluído.")
+        # Criar um objeto curso simulado com os dados necessários
+        curso = {
+            'nome': sigla,  # Ou outro nome mais descritivo se disponível
+            'disciplinas_por_semestre': lambda: por_semestre,
+            'disciplinas': {d['codigo']: d for d in disciplinas}
+        }
+
+        with app.app_context():
+            html = render_template_string(
+                TEMPLATE_STR,
+                curso=curso,  # Agora passando o objeto curso
+                sigla=sigla,
+                por_semestre=por_semestre
+            )
+
+        arquivo = os.path.join(TEMPLATESPUB_DIR, f"{sigla}.html")
+        with open(arquivo, "w", encoding="utf-8") as f:
+            f.write(html)
+
+        print(f"[INFO] Página gerada: {arquivo}")
+
+if __name__ == "__main__":
+    cursos_lista = get_cursos(URL_YAML)
+    cursos_url_json_lst = cursos_json_url(cursos_lista)
+    gerar_paginas(cursos_url_json_lst)
+    print("[INFO] Geração concluída!")
