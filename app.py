@@ -37,7 +37,7 @@ def carregar_cursos_do_yaml(url_yaml):
             dados_yaml = yaml.safe_load(response.text)
             for curso_nome in dados_yaml.keys():
                 curso = Curso(curso_nome)
-                disciplinas = carregar_disciplinas_do_json(curso_nome)
+                disciplinas = carregar_disciplinas_do_yaml(curso_nome)
                 if disciplinas:
                     for codigo, disciplina in disciplinas.items():
                         curso.disciplinas[codigo] = disciplina
@@ -50,7 +50,7 @@ def carregar_cursos_do_yaml(url_yaml):
         print(f"Erro ao carregar dados do YAML: {e}")
         return None
 
-def carregar_disciplinas_do_json(curso_nome):
+def carregar_disciplinas_do_yaml(curso_nome):
     try:
         url_json = f"https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/{curso_nome}.json"
         response = requests.get(url_json)
