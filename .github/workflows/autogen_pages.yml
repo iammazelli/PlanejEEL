@@ -1,0 +1,66 @@
+name: Auto-Generate and Deploy Pages
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Verifica a cada 6 horas (ajuste se necessário)
+  workflow_dispatch:        # Permite executar manualmente
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Passo 1: Baixa a branch main do SEU repositório (com seu script)
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # Passo 2: Configura o Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'  # Use a versão do seu ambiente
+
+      # Passo 3: Baixa o arquivo cursos.yml do repositório externo
+      - name: Download cursos.yml
+        run: |
+          curl -o _python/cursos.yml https://raw.githubusercontent.com/luizeleno/pyjupiter/main/_python/cursos.yml
+          echo "CURSOS_YML_SHA=$(sha1sum _python/cursos.yml | cut -d ' ' -f1)" >> $GITHUB_ENV
+
+      # Passo 4: Compara com o último processado (evita commits desnecessários)
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if [ -f templatespub/last_sha.txt ]; then
+            LAST_SHA=$(cat templatespub/last_sha.txt)
+            if [ "$LAST_SHA" = "$CURSOS_YML_SHA" ]; then
+              echo "Nenhuma mudança em cursos.yml. Abortando."
+              echo "has_changes=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+          echo "Mudanças detectadas! Gerando novas páginas..."
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+
+      # Passo 5: Roda seu script generate_static_pages.py (SEM MODIFICAÇÕES)
+      - name: Generate HTML files
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          python generate_static_pages.py  # Seu script roda como está!
+          echo "$CURSOS_YML_SHA" > templatespub/last_sha.txt  # Salva o SHA atual
+
+      # Passo 6: Envia os arquivos para a gh-pages
+      - name: Deploy to gh-pages
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # Faz checkout da gh-pages e substitui os arquivos
+          git fetch origin gh-pages
+          git checkout gh-pages
+          rm -rf *  # Limpa a branch (exceto .git)
+          cp -r templatespub/* ./
+          
+          git add .
+          git commit -m "Auto-update: páginas geradas em $(date +'%d/%m/%Y %H:%M')"
+          git push origin gh-pages
